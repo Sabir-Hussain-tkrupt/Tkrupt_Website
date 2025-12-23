@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — AI Playbooks for Compliance-Heavy Teams</title>
+    <link rel="icon" type="image/png" href="./assets/6.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .blog-article h1 { font-size: 2.3rem; font-weight: 800; margin-bottom: 1rem; }
+        .blog-article h2 { font-size: 1.6rem; font-weight: 750; margin: 1.5rem 0 0.75rem; }
+        .blog-article h3 { font-size: 1.25rem; font-weight: 700; margin: 1.25rem 0 0.5rem; }
+        .blog-article p { font-size: 1.02rem; line-height: 1.75; margin-bottom: 1rem; }
+    </style>
+</head>
+<body class="bg-black text-gray-100 font-sans">
+<custom-header></custom-header>
+
+<main class="pt-28 pb-20">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-300 mb-4">
+            <a href="resources.html" class="text-[#1DE9B6] hover:underline">Back to Resources</a>
+            <span class="px-3 py-1 rounded-full bg-[#0b222c] border border-[#1DE9B6]/40 text-[#1DE9B6]">RAG systems</span>
+            <span class="px-3 py-1 rounded-full bg-[#0b222c] border border-[#1DE9B6]/40 text-[#1DE9B6]">Graph Databases</span>
+            <span class="flex items-center gap-1"><i data-feather="clock" class="w-4 h-4"></i> 10 min read</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-bold mb-3">RAG, Graph RAG, and Why Your Chatbot Is Lying to You (Politely)</h1>
+        <p class="text-gray-300 mb-6 flex items-center gap-2">
+            <img src="./assets/Musab.png" alt="thumbnail" class="w-10 h-10 rounded-full object-cover border border-[#1DE9B6]/30">
+            Musab Javed   •   AI/ML Engineer Tkrupt
+        </p>
+
+        <img src="./assets/RAG_Blog.png" alt="Compliance AI" class="w-full rounded-2xl mb-8 object-cover shadow-xl" style="max-height: 500px;">
+
+        <article class="prose prose-invert max-w-none blog-article">
+    <p>Everyone and their GPU is building a chatbot these days. You upload some PDFs, throw them into a vector database, add an LLM on top, and boom — “AI-powered assistant.”</p>
+    <p>Congrats. You’ve built RAG. Now let’s talk about why it works… and where it very confidently starts making things up.</p>
+
+    <h2>RAG: The “Sounds About Right” System</h2>
+    <p>Classic RAG (Retrieval Augmented Generation) works like this:</p>
+    <ul class="list-disc pl-6">
+        <li>Break documents into chunks</li>
+        <li>Turn them into embeddings</li>
+        <li>Store them in a vector database</li>
+        <li>Retrieve the most similar text</li>
+        <li>Let the LLM do the talking</li>
+    </ul>
+    <p>It’s great at answering questions like:</p>
+    <ul class="list-disc pl-6">
+        <li>“How do I reset my password?”</li>
+        <li>“What does section 4.2 say?”</li>
+        <li>“Explain feature X”</li>
+    </ul>
+    <p>Because the answer usually lives inside one chunk of text.</p>
+    <p>But ask it:</p>
+    <p>“Who approved this change and why was it delayed?”</p>
+    <p>And suddenly… vibes based reasoning begins.</p>
+
+    <h2>The Problem: Vectors Don’t Understand Reality</h2>
+    <p>Vector databases are excellent at one thing: finding text that sounds related. They are terrible at:</p>
+    <ul class="list-disc pl-6">
+        <li>Who did what</li>
+        <li>Cause and effect</li>
+        <li>Ownership</li>
+        <li>Timelines</li>
+        <li>Dependencies</li>
+    </ul>
+    <p>Your chatbot isn’t lying maliciously — it’s just guessing confidently from nearby paragraphs. Which is fine for FAQs. Not fine for business decisions. Definitely not fine at enterprise scale.</p>
+
+    <h2>Enter Graph RAG: The “Actually Knows Things” Upgrade</h2>
+    <p>Graph RAG adds something radical to the system: structure. Instead of just storing text, you store:</p>
+    <ul class="list-disc pl-6">
+        <li>People</li>
+        <li>Tasks</li>
+        <li>Projects</li>
+        <li>Decisions</li>
+        <li>Relationships between them</li>
+    </ul>
+    <p>In other words: not “what was said” — but what is true. This is where RAG stops being a search trick and starts becoming organizational intelligence.</p>
+
+    <h2>Graph Databases 101 (Very Painless Edition)</h2>
+    <p>A graph database stores data like this:</p>
+    <ul class="list-disc pl-6">
+        <li>Nodes → things (Task, Person, Project)</li>
+        <li>Edges → relationships (ASSIGNED_TO, DEPENDS_ON, APPROVED_BY)</li>
+    </ul>
+    <p>So instead of hoping the model figures things out from text, you can literally ask:</p>
+    <ul class="list-disc pl-6">
+        <li>Who owns this task?</li>
+        <li>What is blocking it?</li>
+        <li>What changed after version v1.2?</li>
+        <li>Which decision caused this delay?</li>
+    </ul>
+    <p>And the system answers without hallucinating its way through Slack history.</p>
+
+    <h2>Why Neo4j Keeps Showing Up in These Conversations</h2>
+    <p>Neo4j is popular in Graph RAG setups because it’s:</p>
+    <ul class="list-disc pl-6">
+        <li>Very good at relationship queries</li>
+        <li>Fast at multi-hop reasoning</li>
+        <li>Flexible when your data evolves</li>
+        <li>Now also capable of storing vectors (yes, both worlds)</li>
+    </ul>
+    <p>This means you can:</p>
+    <ul class="list-disc pl-6">
+        <li>Use the graph to figure out facts</li>
+        <li>Use vectors to retrieve context</li>
+        <li>Let the LLM explain the result like a human</li>
+    </ul>
+    <p>Best of both worlds. No drama.</p>
+
+    <h2>“But Isn’t Graph Stuff Hard?” — Enter MCP</h2>
+    <p>With Model Context Protocol (MCP), LLMs can now:</p>
+    <ul class="list-disc pl-6">
+        <li>Discover a Neo4j graph’s schema</li>
+        <li>Generate Cypher queries automatically</li>
+        <li>Read and update graph data</li>
+        <li>Do all of this through a standard interface</li>
+    </ul>
+    <p>Translation: You no longer need a human writing graph queries for every question. Your chatbot can talk to the graph directly — safely, deterministically, and at scale.</p>
+    <p>This is why Neo4j is no longer “just for personal projects.” It’s now LLM native infrastructure.</p>
+
+    <h2>From Side Project to Enterprise: The ClickUp Example</h2>
+    <p>Every large company already has a graph — it’s just hidden inside tools like ClickUp. Think about what ClickUp actually contains:</p>
+    <ul class="list-disc pl-6">
+        <li>Tasks</li>
+        <li>People</li>
+        <li>Statuses</li>
+        <li>Dependencies</li>
+        <li>Comments</li>
+        <li>Decisions</li>
+        <li>Timelines</li>
+    </ul>
+    <p>When you sync ClickUp into Neo4j, you get things like:</p>
+    <ul class="list-disc pl-6">
+        <li>(Person) → ASSIGNED_TO → (Task)</li>
+        <li>(Task) → DEPENDS_ON → (Task)</li>
+        <li>(Task) → IN_PROJECT → (Project)</li>
+        <li>(Comment) → EXPLAINS → (Delay)</li>
+        <li>(Decision) → MADE_BY → (Manager)</li>
+    </ul>
+    <p>Now your enterprise chatbot can answer:</p>
+    <ul class="list-disc pl-6">
+        <li>“Why is this task delayed?”</li>
+        <li>“What is blocking the current sprint?”</li>
+        <li>“Which engineer is overloaded?”</li>
+        <li>“What decisions last quarter caused delivery risk?”</li>
+    </ul>
+    <p>Not by guessing. By traversing reality. And with MCP, the chatbot doesn’t need hard coded logic — it queries the graph on demand.</p>
+
+    <h2>This Is Why Graph RAG Scales (Vectors Alone Don’t)</h2>
+    <p>At enterprise size:</p>
+    <ul class="list-disc pl-6">
+        <li>Data is fragmented</li>
+        <li>Decisions are connected</li>
+        <li>Context lives across tools</li>
+        <li>“Why” matters more than “what”</li>
+    </ul>
+    <p>Vector RAG retrieves text. Graph RAG retrieves relationships, history, and accountability. That’s the difference between:</p>
+    <ul class="list-disc pl-6">
+        <li>A chatbot that answers</li>
+        <li>And a chatbot that explains</li>
+    </ul>
+
+    <h2>When You Actually Need Graph RAG (Honest Checklist)</h2>
+    <p>You probably want Graph RAG if you ask:</p>
+    <ul class="list-disc pl-6">
+        <li>“Why did this happen?”</li>
+        <li>“Who is responsible?”</li>
+        <li>“What depends on this?”</li>
+        <li>“What changed after X?”</li>
+    </ul>
+    <p>If your chatbot only answers FAQs, docs, or how-tos, vector RAG alone is perfectly fine. No need to summon a graph dragon.</p>
+
+    <h2>The Final Takeaway</h2>
+    <ul class="list-disc pl-6">
+        <li>Vector RAG is great at remembering text</li>
+        <li>Graph RAG is great at remembering reality</li>
+        <li>Neo4j + MCP lets your AI query reality directly</li>
+    </ul>
+    <p>Or put differently: Vector RAG makes your chatbot sound smart. Graph RAG makes it be smart. And once you notice the difference, there’s no going back.</p>
+</article>
+
+    </div>
+</main>
+
+<section class="thematic-section py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="section-heading mb-4">Need a compliant AI rollout?</h2>
+        <p class="section-subtitle mb-8 max-w-3xl mx-auto">We’ll help you design guardrails, audits, and playbooks tailored to your regulators.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="https://calendly.com/tkrupt-llc/30min" class="hero-cta-primary flex items-center justify-center gap-2 text-lg" style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
+                <i data-feather="calendar" class="w-5 h-5"></i>
+                <span>Book a Strategy Call</span>
+            </a>
+            <a href="resources.html" class="hero-cta-secondary flex items-center justify-center gap-2 text-lg">
+                <i data-feather="arrow-left" class="w-5 h-5"></i>
+                <span>Back to Resources</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<custom-footer></custom-footer>
+<script src="components/header.js"></script>
+<script src="components/footer.js"></script>
+<script src="script.js"></script>
+<script>feather.replace();</script>
+</body>
+</html>
+
