@@ -85,17 +85,19 @@
                 <span>Your AI Enhancement Partner</span>
             </div>
             
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight mx-auto">
+            <h1 class="flex flex-col gap-1 sm:gap-2 items-center justify-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight mx-auto">
+                
                 <span class="block text-4xl sm:text-5xl md:text-6xl bg-gradient-to-br from-[#008080] to-[#1DE9B6] bg-clip-text text-transparent">
                     Unlock Your
                 </span>
                 
-                <span id="dynamic-text" class="inline-block transition-all duration-500 ease-in-out opacity-100 translate-y-0 bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent">
-                    Potential
+                <span class="relative block h-[1.2em] w-full overflow-hidden">
+                    <span id="dynamic-text" class="absolute inset-0 w-full transition-all duration-700 ease-out opacity-100 translate-y-0 bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent">
+                        Potential
+                    </span>
                 </span>
-                <br>
                 
-                <span class="block text-4xl sm:text-5xl md:text-6xl bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent">
+                <span class="block text-4xl sm:text-5xl md:text-6xl pb-3 bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent">
                     By Reliable AI
                 </span>
             </h1>
@@ -117,7 +119,7 @@
         </div>
         
         <div class="absolute bottom-16 w-full flex justify-center animate-bounce">
-            <a href="#strategy" class="inline-flex items-center justify-center">
+            <a href="#services" class="inline-flex items-center justify-center">
                 <i data-feather="chevron-down" class="text-[#00a6ff] w-10 h-10"></i>
             </a>
         </div>
@@ -130,23 +132,35 @@
     const textElement = document.getElementById("dynamic-text");
 
     setInterval(() => {
-        // 1. Fade out and slide up slightly
-        textElement.classList.remove('opacity-100', 'translate-y-0');
-        textElement.classList.add('opacity-0', '-translate-y-4');
+        // 1. Exit Phase: Slide UP and Fade Out
+        textElement.classList.remove('translate-y-0', 'opacity-100');
+        textElement.classList.add('-translate-y-8', 'opacity-0');
 
-        // 2. Wait for the transition to finish (500ms matches the duration-500 class)
+        // 2. Reset & Enter Phase
         setTimeout(() => {
-            // Update the text index
             currentIndex = (currentIndex + 1) % words.length;
             textElement.innerText = words[currentIndex];
 
-            // 3. Reset position instantly to slide from bottom (optional) or just fade back in
-            // For a smooth "in-place" fade, we just reverse the classes:
-            textElement.classList.remove('opacity-0', '-translate-y-4');
-            textElement.classList.add('opacity-100', 'translate-y-0');
+            // Disable transition to teleport
+            textElement.classList.remove('transition-all', 'duration-700', 'ease-out');
+            
+            // Move to bottom instantly
+            textElement.classList.remove('-translate-y-8'); 
+            textElement.classList.add('translate-y-8');
+
+            // Force reflow
+            void textElement.offsetWidth;
+
+            // Re-enable transition
+            textElement.classList.add('transition-all', 'duration-700', 'ease-out');
+            
+            // Slide to center
+            textElement.classList.remove('translate-y-8', 'opacity-0');
+            textElement.classList.add('translate-y-0', 'opacity-100');
+
         }, 500); 
 
-    }, 2500); // Cycle every 2.5 seconds (2s viewing time + 0.5s transition)
+    }, 2500);
 </script>
     <!-- Tech Stack Logos Bar -->
     <div class="tech-stack-bar">
@@ -205,7 +219,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Custom AI/ML Development</h3>
                     <p class="mb-4" style="color: rgba(226, 232, 240, 0.85);">Tailored AI models built on your data to unlock new performance and differentiation.</p>
-                    <a href="#" class="neon-link">
+                    <a href="services.html#LLM" class="neon-link">
                         Learn more →
                     </a>
                 </div>
@@ -218,9 +232,9 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Generative AI & Agents</h3>
-                    <p class="mb-4" style="color: rgba(226, 232, 240, 0.85);">Smart assistants, chatbots, and autonomous systems that elevate productivity.</p>
-                    <a href="#" class="neon-link">
+                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Generative AI & RAG Agents</h3>
+                    <p class="mb-4" style="color: rgba(226, 232, 240, 0.85);">Smart assistants, chatbots, and autonomous RAG systems with source-backed answers.</p>
+                    <a href="services.html#LLM" class="neon-link">
                         Learn more →
                     </a>
                 </div>
@@ -236,7 +250,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Voice & chat agents</h3>
                     <p class="mb-4" style="color: rgba(226, 232, 240, 0.85);">Multimodal AI with safeguards, escalation flows, and deep conversational analytics.</p>
-                    <a href="#" class="neon-link">
+                    <a href="services.html#LLM" class="neon-link">
                         Learn more →
                     </a>
                 </div>
@@ -251,9 +265,9 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Knowledge-grounded Q&A</h3>
-                    <p class="mb-4" style="color: rgba(226, 232, 240, 0.85);">RAG-powered answers with source citations for accuracy and trust.</p>
-                    <a href="#" class="neon-link">
+                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Workflow Automation & Multi-Agent Systems</h3>
+                    <p class="mb-4" style="color: rgba(226, 232, 240, 0.85);">Coordinate agents to handle intake, processing, and human-in-the-loop steps.</p>
+                    <a href=services.html#AI class="neon-link">
                         Learn more →
                     </a>
                 </div>
@@ -269,7 +283,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI Consulting & Enablement</h3>
                     <p class="mb-4" style="color: rgba(226, 232, 240, 0.85);">Strategic guidance, adoption support, and training to embed AI across your business.</p>
-                    <a href="#" class="neon-link">
+                    <a href="services.html" class="neon-link">
                         Learn more →
                     </a>
                 </div>
@@ -285,7 +299,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Model Context Protocol (MCP) Systems</h3>
                     <p class="mb-4" style="color: rgba(226, 232, 240, 0.85);">Standardized context, real-time sync, and seamless integration between your tools and AI agents.</p>
-                    <a href="#" class="neon-link">
+                    <a href="services.html#AI" class="neon-link">
                         Learn more →
                     </a>
                 </div>

@@ -27,15 +27,18 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
+        
         .blog-card {
-            background: linear-gradient(145deg, rgba(4, 24, 32, 0.85), rgba(3, 12, 18, 0.95));
-            border: 1px solid rgba(4, 215, 194, 0.12);
-            border-radius: 18px;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-            min-height: 360px;
-            overflow: hidden;
-            padding: 0;
-        }
+    background: linear-gradient(145deg, rgba(4, 24, 32, 0.85), rgba(3, 12, 18, 0.95));
+    border: 1px solid rgba(4, 215, 194, 0.12);
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden; 
+    display: flex;    
+    flex-direction: column; 
+    height: 100%;    
+    padding: 0 !important; 
+}
         .blog-card:hover {
             transform: translateY(-6px);
             border-color: rgba(0, 185, 255, 0.4);
@@ -48,18 +51,22 @@
         .blog-card p {
             line-height: 1.6;
         }
-        .blog-img {
+
+.blog-img {
     width: 100%;
-    height: 100%; /* adjust height as needed */
-    object-fit: cover; /* keeps aspect ratio while filling */
-    border-top-left-radius: 18px; /* match card radius */
+    height: 300px;
+    object-fit: cover; 
+    border-top-left-radius: 18px;
     border-top-right-radius: 18px;
     display: block;
-     margin: 0;
-    padding: 0;
-    transition: transform 0.25s ease;
-    position: relative;
+    margin: 0;
+}
 
+.blog-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
         .industry-pill {
@@ -133,54 +140,83 @@
 
             <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
 
-                <a href="blog 1.html" class="blog-card p-5 flex flex-col gap-4">
-                    <img src="./assets/MCP_Blog.png" alt="RAG Systems" class="blog-img">
-                    <div class="flex items-center justify-between text-sm text-gray-300">
-                        <span class="industry-pill">AI Agents & MCP</span>
-                        <span>Awais Anwer • 12 min read</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-1">How AI Agents Connect to the World: Before and After MCP</h3>
-                        <p class="text-gray-300 text-sm">Model Context Protocol (MCP) enables AI agents to connect seamlessly with real-world data and services, transforming isolated AI models into powerful, interactive assistants.</p>
-                    </div>
-                </a>
-                
-                <a href="blog 2.html" class="blog-card p-5 flex flex-col gap-4">
-                    <img src="./assets/RAG_Blog.png" alt="Compliance AI" class="blog-img">
-                    <div class="flex items-center justify-between text-sm text-gray-300">
-                        <span class="industry-pill">Graph Databases</span>
-                        <span>Musab Javed • 10 min read</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-1">RAG, Graph RAG, and Why Your Chatbot Is Lying to You (Politely)</h3>
-                        <p class="text-gray-300 text-sm">RAG and Graph RAG systems illustrate the difference between text-based retrieval and structured knowledge representation, showing how Graph RAG combined with MCP enables chatbots to reason accurately and handle complex enterprise questions.</p>
-                    </div>
-                </a>
-
-                <a href="blog 4.html" class="blog-card p-5 flex flex-col gap-4">
-                    <img src="./assets/AI Phone Call Agent.png" alt="AI Agents" class="blog-img">
-                    <div class="flex items-center justify-between text-sm text-gray-300">
-                        <span class="industry-pill">Sales & Support AI</span>
-                        <span>Dr. Sarah Chen • 8 min read</span>
-                    </div>
-                    <div>  
-                        <h3 class="text-xl font-semibold text-white mb-1">The Future of AI Agents: How Zack and Ted Are Revolutionizing Business Operations</h3>
-                        <p class="text-gray-300 text-sm">Explore how Zack and Ted automate sales and support to deliver 24/7 revenue and CX gains.</p>
-                    </div>
-                </a>
-
-                <a href="blog 3.html" class="blog-card p-5 flex flex-col gap-4">
-                    <img src="./assets/Workflow_Blog.png" alt="Data pipelines" class="blog-img">
-                    <div class="flex items-center justify-between text-sm text-gray-300">
-                        <span class="industry-pill">AI Workflow Optimization</span>
-                        <span>Sabir Hussain • 8 min read</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-1">How Autonomous AI Agents Are Shaping the Future of Enterprise Workflows</h3>
-                        <p class="text-gray-300 text-sm">Autonomous AI agents transform enterprise operations by automating workflows, providing context-aware insights, and enabling intelligent decision-making across departments.</p>
-                    </div>
-                </a>
+    <a href="blog 1.html" class="blog-card group">
+        <img src="./assets/MCP_Blog.png" alt="RAG Systems" class="blog-img">
+        
+        <div class="p-6 flex flex-col gap-4 h-full">
+            <div class="flex items-center justify-between text-sm text-gray-300">
+                <span class="industry-pill">AI Agents & MCP</span>
+                <span>Awais Anwer • 12 min read</span>
             </div>
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#05e3cf] transition-colors">
+                    How AI Agents Connect to the World: Before and After MCP
+                </h3>
+                <p class="text-gray-300 text-sm line-clamp-3">
+                    Model Context Protocol (MCP) enables AI agents to connect seamlessly with real-world data and services, transforming isolated AI models into powerful assistants.
+                </p>
+            </div>
+        </div>
+    </a>
+    
+    <a href="blog 2.html" class="blog-card group">
+        <img src="./assets/RAG_Blog.png" alt="Compliance AI" class="blog-img">
+        
+        <div class="p-6 flex flex-col gap-4 h-full">
+            <div class="flex items-center justify-between text-sm text-gray-300">
+                <span class="industry-pill">Graph Databases</span>
+                <span>Musab Javed • 10 min read</span>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#05e3cf] transition-colors">
+                    RAG, Graph RAG, and Why Your Chatbot Is Lying to You (Politely)
+                </h3>
+                <p class="text-gray-300 text-sm line-clamp-3">
+                    RAG and Graph RAG systems illustrate the difference between text-based retrieval and structured knowledge representation.
+                </p>
+            </div>
+        </div>
+    </a>
+
+    <a href="blog 4.html" class="blog-card group">
+        <img src="./assets/AI Phone Call Agent.png" alt="AI Agents" class="blog-img">
+        
+        <div class="p-6 flex flex-col gap-4 h-full">
+            <div class="flex items-center justify-between text-sm text-gray-300">
+                <span class="industry-pill">Sales & Support AI</span>
+                <span>Dr. Sarah Chen • 8 min read</span>
+            </div>
+            <div>  
+                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#05e3cf] transition-colors">
+                    The Future of AI Agents: How Zack and Ted Are Revolutionizing Business
+                </h3>
+                <p class="text-gray-300 text-sm line-clamp-3">
+                    Explore how Zack and Ted automate sales and support to deliver 24/7 revenue and CX gains.
+                </p>
+            </div>
+        </div>
+    </a>
+
+    <a href="blog 3.html" class="blog-card group">
+        <img src="./assets/Workflow_Blog.png" alt="Data pipelines" class="blog-img">
+        
+        <div class="p-6 flex flex-col gap-4 h-full">
+            <div class="flex items-center justify-between text-sm text-gray-300">
+                <span class="industry-pill">AI Workflow Optimization</span>
+                <span>Sabir Hussain • 8 min read</span>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#05e3cf] transition-colors">
+                    How Autonomous AI Agents Are Shaping the Future of Enterprise Workflows
+                </h3>
+                <p class="text-gray-300 text-sm line-clamp-3">
+                    Autonomous AI agents transform enterprise operations by automating workflows, providing context-aware insights, and enabling intelligent decision-making.
+                </p>
+            </div>
+        </div>
+    </a>
+
+</div>
         </div>
     </section>
 
