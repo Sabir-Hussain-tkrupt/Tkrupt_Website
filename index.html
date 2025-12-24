@@ -30,9 +30,9 @@
 <body class="bg-black text-gray-100 font-sans">
     <custom-header></custom-header>
     <!-- Hero Section -->
-<section class="relative h-screen overflow-hidden flex items-center justify-center bg-[#01070f] text-center" id="hero">
+<!-- <section class="relative h-screen overflow-hidden flex items-center justify-center bg-[#01070f] text-center" id="hero">
 <particle-background></particle-background>
-        <!-- Gradient overlays -->
+        
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#020a0f]/75 to-[#000000] pointer-events-none"></div>
         <div class="absolute top-24 left-8 w-64 h-64 bg-[#0ad4bf33] rounded-full blur-3xl opacity-70 animate-pulse"></div>
         <div class="absolute bottom-20 right-12 w-96 h-96 bg-[#0098ff29] rounded-full blur-3xl opacity-70 animate-pulse" style="animation-delay:1.8s;"></div>
@@ -44,9 +44,9 @@
                     <span>Your AI Enhancement Partner</span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight mx-auto">
-                    <span class="bg-gradient-to-br from-[#008080] to-[#1DE9B6] bg-clip-text text-transparent">Automate</span>
-                    <span class="bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent">Accelerate</span>
-                    <span class="bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent">Dominate</span>
+                    <span class=" block text-4xl sm:text-5xl md:text-6xl bg-gradient-to-br from-[#008080] to-[#1DE9B6] bg-clip-text text-transparent">Unlock Your</span><br>
+                    <span class="bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent">Potential</span>
+                    <span class="block text-4xl sm:text-5xl md:text-6xl bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent">By Relaiable AI</span>
                 </h1>
 
                 <p class="text-base sm:text-lg md:text-xl mb-10 text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
@@ -69,7 +69,85 @@
                     <i data-feather="chevron-down" class="text-[#00a6ff] w-10 h-10"></i>
                 </a>
             </div>
+</section> -->
+<section class="relative h-screen overflow-hidden flex items-center justify-center bg-[#01070f] text-center" id="hero">
+    <particle-background></particle-background>
+    
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#020a0f]/75 to-[#000000] pointer-events-none"></div>
+    <div class="absolute top-24 left-8 w-64 h-64 bg-[#0ad4bf33] rounded-full blur-3xl opacity-70 animate-pulse"></div>
+    <div class="absolute bottom-20 right-12 w-96 h-96 bg-[#0098ff29] rounded-full blur-3xl opacity-70 animate-pulse" style="animation-delay:1.8s;"></div>
+    <div class="absolute top-1/3 left-1/2 w-72 h-72 bg-[#7c3aed33] rounded-full blur-3xl opacity-60 animate-pulse" style="animation-delay:3s;"></div>
+    
+    <div class="container mx-auto h-full flex items-center justify-center relative z-10 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#05e3cf]/30 backdrop-blur-md text-sm font-medium text-[#05e3cf] mb-8">
+                <i data-feather="zap" class="w-4 h-4 text-[#f5c84c]"></i>
+                <span>Your AI Enhancement Partner</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight mx-auto">
+                <span class="block text-4xl sm:text-5xl md:text-6xl bg-gradient-to-br from-[#008080] to-[#1DE9B6] bg-clip-text text-transparent">
+                    Unlock Your
+                </span>
+                
+                <span id="dynamic-text" class="inline-block transition-all duration-500 ease-in-out opacity-100 translate-y-0 bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent">
+                    Potential
+                </span>
+                <br>
+                
+                <span class="block text-4xl sm:text-5xl md:text-6xl bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent">
+                    By Reliable AI
+                </span>
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl mb-10 text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
+                Custom AI services, industry-ready AI solutions, and ready-to-deploy AI products built to accelerate your efficiency, intelligence, and growth.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <a href="https://calendly.com/tkrupt-llc/30min" class="hero-cta-primary flex items-center justify-center gap-2 text-lg" style="background: linear-gradient(120deg, #05e3cf, #00a6ff);">
+                    <span>Book a Call</span>
+                    <i data-feather="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="ai-solutions.html" class="hero-cta-secondary flex items-center justify-center gap-2 text-lg">
+                    <span>Explore Solutions</span>
+                    <i data-feather="grid" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-16 w-full flex justify-center animate-bounce">
+            <a href="#strategy" class="inline-flex items-center justify-center">
+                <i data-feather="chevron-down" class="text-[#00a6ff] w-10 h-10"></i>
+            </a>
+        </div>
+    </div>
 </section>
+
+<script>
+    const words = ["Potential", "Growth", "Transformations"];
+    let currentIndex = 0;
+    const textElement = document.getElementById("dynamic-text");
+
+    setInterval(() => {
+        // 1. Fade out and slide up slightly
+        textElement.classList.remove('opacity-100', 'translate-y-0');
+        textElement.classList.add('opacity-0', '-translate-y-4');
+
+        // 2. Wait for the transition to finish (500ms matches the duration-500 class)
+        setTimeout(() => {
+            // Update the text index
+            currentIndex = (currentIndex + 1) % words.length;
+            textElement.innerText = words[currentIndex];
+
+            // 3. Reset position instantly to slide from bottom (optional) or just fade back in
+            // For a smooth "in-place" fade, we just reverse the classes:
+            textElement.classList.remove('opacity-0', '-translate-y-4');
+            textElement.classList.add('opacity-100', 'translate-y-0');
+        }, 500); 
+
+    }, 2500); // Cycle every 2.5 seconds (2s viewing time + 0.5s transition)
+</script>
     <!-- Tech Stack Logos Bar -->
     <div class="tech-stack-bar">
         <div class="tech-stack-label">Trusted Clients</div>
