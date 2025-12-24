@@ -252,3 +252,4 @@ class ReviewsSection extends HTMLElement {
   }
 }
 customElements.define('reviews-section', ReviewsSection);
+

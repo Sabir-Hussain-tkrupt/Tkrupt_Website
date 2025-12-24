@@ -222,7 +222,7 @@ class CustomFooter extends HTMLElement {
 </div>
             
             <div class="copyright">
-                &copy; 2030 Tkrupt. All rights reserved.
+                &copy; 2026 Tkrupt. All rights reserved.
             </div>
         `;
         

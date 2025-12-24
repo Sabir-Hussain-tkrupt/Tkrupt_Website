@@ -72,151 +72,276 @@ const animateNumber = (counter) => {
         });
     });
 
-    // Reviews carousel with auto-rotate
-    const reviewsRoot = document.querySelector('[data-reviews-root]');
-    if (reviewsRoot) {
-        const reviews = [
-            {
-                name: 'Julie',
-                avatar: './assets/julie.png',
-                quote: 'Working with the team was incredible. Ujala understood our AI requirements deeply and delivered a bilingual phone agent that feels almost human. The voice cloning, real-time routing, and automation workflows have transformed our real estate operations. Truly impressive work.',
-            },
-            {
-                name: 'Talha',
-                avatar: './assets/Talha.jpeg',
-                quote: 'Exceptional delivery. The analytics system gave us clarity on portfolio timing, performance concentration, and rebalancing strategy—something we couldn\'t achieve manually. Smart, precise, and very well-structured work.',
-            },
-            {
-                name: 'Stefan',
-                avatar: './assets/stefan.png',
-                quote: 'Fantastic experience. The team was proactive, understood our requirements quickly, and delivered a polished solution that worked better than expected. Smooth communication and dependable results.',
-            },
-            {
-                name: 'Kamil',
-                avatar: './assets/Kamil.jpeg',
-                quote: 'Great experience working with the team. Clear communication, fast delivery, and solid technical execution. Would be happy to collaborate again.',
-            }
-        ];
+    // // Reviews carousel with auto-rotate
+    // const reviewsRoot = document.querySelector('[data-reviews-root]');
+    // if (reviewsRoot) {
+    //     const reviews = [
+    //         {
+    //             name: 'Julie',
+    //             avatar: './assets/julie.png',
+    //             quote: 'Working with the team was incredible. Ujala understood our AI requirements deeply and delivered a bilingual phone agent that feels almost human. The voice cloning, real-time routing, and automation workflows have transformed our real estate operations. Truly impressive work.',
+    //         },
+    //         {
+    //             name: 'Talha',
+    //             avatar: './assets/Talha.jpeg',
+    //             quote: 'Exceptional delivery. The analytics system gave us clarity on portfolio timing, performance concentration, and rebalancing strategy—something we couldn\'t achieve manually. Smart, precise, and very well-structured work.',
+    //         },
+    //         {
+    //             name: 'Stefan',
+    //             avatar: './assets/stefan.png',
+    //             quote: 'Fantastic experience. The team was proactive, understood our requirements quickly, and delivered a polished solution that worked better than expected. Smooth communication and dependable results.',
+    //         },
+    //         {
+    //             name: 'Kamil',
+    //             avatar: './assets/Kamil.jpeg',
+    //             quote: 'Great experience working with the team. Clear communication, fast delivery, and solid technical execution. Would be happy to collaborate again.',
+    //         }
+    //     ];
 
-        const track = reviewsRoot.querySelector('[data-review-track]');
-        const dotsContainer = document.querySelector('[data-reviews-dots]');
+    //     const track = reviewsRoot.querySelector('[data-review-track]');
+    //     const dotsContainer = document.querySelector('[data-reviews-dots]');
 
-        const buildSlide = (review) => {
-            const article = document.createElement('article');
-            article.className = 'review-slide';
+    //     const buildSlide = (review) => {
+    //         const article = document.createElement('article');
+    //         article.className = 'review-slide';
             
-            article.innerHTML = `
-                <div class="review-card">
-                    <div class="review-avatar review-avatar--circle">
-                        <img src="${review.avatar}" alt="${review.name}">
-                    </div>
-                    <div class="review-content">
-                        <div class="review-top">
-                            <h4 class="review-name">${review.name}</h4>
-                        </div>
-                        <p class="review-quote">"${review.quote}"</p>
-                    </div>
-                </div>
-            `;
+    //         article.innerHTML = `
+    //             <div class="review-card">
+    //                 <div class="review-avatar review-avatar--circle">
+    //                     <img src="${review.avatar}" alt="${review.name}">
+    //                 </div>
+    //                 <div class="review-content">
+    //                     <div class="review-top">
+    //                         <h4 class="review-name">${review.name}</h4>
+    //                     </div>
+    //                     <p class="review-quote">"${review.quote}"</p>
+    //                 </div>
+    //             </div>
+    //         `;
             
-            // Initialize feather icons after adding to DOM
-            setTimeout(() => {
-                if (typeof feather !== 'undefined') {
-                    feather.replace();
-                }
-            }, 0);
+    //         // Initialize feather icons after adding to DOM
+    //         setTimeout(() => {
+    //             if (typeof feather !== 'undefined') {
+    //                 feather.replace();
+    //             }
+    //         }, 0);
             
-            return article;
-        };
+    //         return article;
+    //     };
 
-        reviews.forEach(review => track.appendChild(buildSlide(review)));
-        const slides = Array.from(track.children);
+    //     reviews.forEach(review => track.appendChild(buildSlide(review)));
+    //     const slides = Array.from(track.children);
 
-        const buildDots = () => {
-            dotsContainer.innerHTML = '';
-            reviews.forEach((_, index) => {
-                const dot = document.createElement('button');
-                dot.addEventListener('click', () => {
-                    currentReview = index;
-                    renderReview(true);
-                    // Reset auto-rotate timer
-                    clearInterval(reviewAutoRotateInterval);
-                    reviewAutoRotateInterval = setInterval(nextReview, 3500);
-                });
-                dotsContainer.appendChild(dot);
-            });
-            // Add chevron down icon at the end
-            const chevron = document.createElement('button');
-            chevron.className = 'chevron-down';
-            chevron.setAttribute('aria-label', 'Next review');
-            chevron.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
-            chevron.addEventListener('click', () => {
-                currentReview = (currentReview + 1) % reviews.length;
-                renderReview(true);
-                // Reset auto-rotate timer
-                clearInterval(reviewAutoRotateInterval);
-                reviewAutoRotateInterval = setInterval(nextReview, 3500);
-            });
-            dotsContainer.appendChild(chevron);
-        };
+    //     const buildDots = () => {
+    //         dotsContainer.innerHTML = '';
+    //         reviews.forEach((_, index) => {
+    //             const dot = document.createElement('button');
+    //             dot.addEventListener('click', () => {
+    //                 currentReview = index;
+    //                 renderReview(true);
+    //                 // Reset auto-rotate timer
+    //                 clearInterval(reviewAutoRotateInterval);
+    //                 reviewAutoRotateInterval = setInterval(nextReview, 3500);
+    //             });
+    //             dotsContainer.appendChild(dot);
+    //         });
+    //         // Add chevron down icon at the end
+    //         const chevron = document.createElement('button');
+    //         chevron.className = 'chevron-down';
+    //         chevron.setAttribute('aria-label', 'Next review');
+    //         chevron.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+    //         chevron.addEventListener('click', () => {
+    //             currentReview = (currentReview + 1) % reviews.length;
+    //             renderReview(true);
+    //             // Reset auto-rotate timer
+    //             clearInterval(reviewAutoRotateInterval);
+    //             reviewAutoRotateInterval = setInterval(nextReview, 3500);
+    //         });
+    //         dotsContainer.appendChild(chevron);
+    //     };
 
-        const dots = () => Array.from(dotsContainer.children).filter(btn => !btn.classList.contains('chevron-down'));
+    //     const dots = () => Array.from(dotsContainer.children).filter(btn => !btn.classList.contains('chevron-down'));
 
-        let currentReview = 0;
-        let isPaused = false;
-        let reviewAutoRotateInterval;
-        const getIndex = (offset) => (currentReview + offset + reviews.length) % reviews.length;
+    //     let currentReview = 0;
+    //     let isPaused = false;
+    //     let reviewAutoRotateInterval;
+    //     const getIndex = (offset) => (currentReview + offset + reviews.length) % reviews.length;
 
-        const renderReview = (animate = true) => {
-            slides.forEach((slide, idx) => {
-                slide.classList.remove('is-center', 'is-left', 'is-right', 'is-hidden', 'animate');
+    //     const renderReview = (animate = true) => {
+    //         slides.forEach((slide, idx) => {
+    //             slide.classList.remove('is-center', 'is-left', 'is-right', 'is-hidden', 'animate');
                 
-                if (idx === currentReview) {
-                    slide.classList.add('is-center');
-                    if (animate) {
-                        void slide.offsetWidth;
-                        slide.classList.add('animate');
-                    }
-                } else {
-                    slide.classList.add('is-hidden');
-                }
-            });
+    //             if (idx === currentReview) {
+    //                 slide.classList.add('is-center');
+    //                 if (animate) {
+    //                     void slide.offsetWidth;
+    //                     slide.classList.add('animate');
+    //                 }
+    //             } else {
+    //                 slide.classList.add('is-hidden');
+    //             }
+    //         });
 
-            dots().forEach((dot, idx) => {
-                if (dot.classList.contains('chevron-down')) return;
-                dot.classList.toggle('is-active', idx === currentReview);
-            });
+    //         dots().forEach((dot, idx) => {
+    //             if (dot.classList.contains('chevron-down')) return;
+    //             dot.classList.toggle('is-active', idx === currentReview);
+    //         });
             
-            // Reinitialize feather icons after DOM updates
+    //         // Reinitialize feather icons after DOM updates
+    //         if (typeof feather !== 'undefined') {
+    //             feather.replace();
+    //         }
+    //     };
+
+    //     const nextReview = () => {
+    //         if (!isPaused) {
+    //             currentReview = (currentReview + 1) % reviews.length;
+    //             renderReview(true);
+    //         }
+    //     };
+
+    //     // Pause on hover
+    //     if (track) {
+    //         track.addEventListener('mouseenter', () => {
+    //             isPaused = true;
+    //         });
+    //         track.addEventListener('mouseleave', () => {
+    //             isPaused = false;
+    //         });
+    //     }
+
+
+    //     buildDots();
+    //     renderReview(false);
+        
+    //     // Auto-rotate every 3.5 seconds
+    //     reviewAutoRotateInterval = setInterval(nextReview, 1500);
+    // }
+    // Reviews carousel with auto-rotate
+const reviewsRoot = document.querySelector('[data-reviews-root]');
+if (reviewsRoot) {
+    const reviews = [
+        {
+            name: 'Julie',
+            avatar: './assets/julie.png',
+            quote: 'Working with the team was incredible. Ujala understood our AI requirements deeply and delivered a bilingual phone agent that feels almost human. The voice cloning, real-time routing, and automation workflows have transformed our real estate operations. Truly impressive work.',
+        },
+        {
+            name: 'Talha',
+            avatar: './assets/Talha.jpeg',
+            quote: 'Exceptional delivery. The analytics system gave us clarity on portfolio timing, performance concentration, and rebalancing strategy—something we couldn\'t achieve manually. Smart, precise, and very well-structured work.',
+        },
+        {
+            name: 'Stefan',
+            avatar: './assets/stefan.png',
+            quote: 'Fantastic experience. The team was proactive, understood our requirements quickly, and delivered a polished solution that worked better than expected. Smooth communication and dependable results.',
+        },
+        {
+            name: 'Kamil',
+            avatar: './assets/Kamil.jpeg',
+            quote: 'Great experience working with the team. Clear communication, fast delivery, and solid technical execution. Would be happy to collaborate again.',
+        }
+    ];
+
+    const track = reviewsRoot.querySelector('[data-review-track]');
+    const dotsContainer = document.querySelector('[data-reviews-dots]');
+
+    const buildSlide = (review) => {
+        const article = document.createElement('article');
+        article.className = 'review-slide';
+        
+        article.innerHTML = `
+            <div class="review-card">
+                <div class="review-avatar review-avatar--circle">
+                    <img src="${review.avatar}" alt="${review.name}">
+                </div>
+                <div class="review-content">
+                    <div class="review-top">
+                        <h4 class="review-name">${review.name}</h4>
+                    </div>
+                    <p class="review-quote">"${review.quote}"</p>
+                </div>
+            </div>
+        `;
+        
+        setTimeout(() => {
             if (typeof feather !== 'undefined') {
                 feather.replace();
             }
-        };
-
-        const nextReview = () => {
-            if (!isPaused) {
-                currentReview = (currentReview + 1) % reviews.length;
-                renderReview(true);
-            }
-        };
-
-        // Pause on hover
-        if (track) {
-            track.addEventListener('mouseenter', () => {
-                isPaused = true;
-            });
-            track.addEventListener('mouseleave', () => {
-                isPaused = false;
-            });
-        }
-
-
-        buildDots();
-        renderReview(false);
+        }, 0);
         
-        // Auto-rotate every 3.5 seconds
-        reviewAutoRotateInterval = setInterval(nextReview, 1500);
+        return article;
+    };
+
+    reviews.forEach(review => track.appendChild(buildSlide(review)));
+    const slides = Array.from(track.children);
+
+    // --- MODIFIED FUNCTION: Only builds the Arrow, no Dots ---
+    const buildControls = () => {
+        dotsContainer.innerHTML = '';
+        
+        // Removed the loop that creates the dots
+        
+        // Only create the chevron (arrow)
+        const chevron = document.createElement('button');
+        chevron.className = 'chevron-down';
+        chevron.setAttribute('aria-label', 'Next review');
+        chevron.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+        
+        chevron.addEventListener('click', () => {
+            currentReview = (currentReview + 1) % reviews.length;
+            renderReview(true);
+            // Reset auto-rotate timer
+            clearInterval(reviewAutoRotateInterval);
+            reviewAutoRotateInterval = setInterval(nextReview, 3500);
+        });
+        
+        dotsContainer.appendChild(chevron);
+    };
+
+    let currentReview = 0;
+    let isPaused = false;
+    let reviewAutoRotateInterval;
+
+    const renderReview = (animate = true) => {
+        slides.forEach((slide, idx) => {
+            slide.classList.remove('is-center', 'is-left', 'is-right', 'is-hidden', 'animate');
+            
+            if (idx === currentReview) {
+                slide.classList.add('is-center');
+                if (animate) {
+                    void slide.offsetWidth;
+                    slide.classList.add('animate');
+                }
+            } else {
+                slide.classList.add('is-hidden');
+            }
+        });
+
+        // Removed logic that updates dot active state
+        
+        if (typeof feather !== 'undefined') {
+            feather.replace();
+        }
+    };
+
+    const nextReview = () => {
+        if (!isPaused) {
+            currentReview = (currentReview + 1) % reviews.length;
+            renderReview(true);
+        }
+    };
+
+    if (track) {
+        track.addEventListener('mouseenter', () => { isPaused = true; });
+        track.addEventListener('mouseleave', () => { isPaused = false; });
     }
+
+    buildControls(); // Renamed function call
+    renderReview(false);
+    
+    reviewAutoRotateInterval = setInterval(nextReview, 1500);
+}
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -255,12 +380,13 @@ const animateNumber = (counter) => {
             // Hero title - top to bottom reveal for each word (faster)
             if (heroTitle && heroTitleSpans.length > 0) {
                 heroTitleSpans.forEach((span, index) => {
-                    // Each span starts from top (translateY(-100%))
+                    // Each span starts from top (translateY(-100%))DOMContentLoaded
                     setTimeout(() => {
                         span.classList.add('animate');
                     }, 300 + (index * 200)); // Stagger each word: 300ms, 500ms, 700ms
                 });
             }
+            
             
             if (heroDesc) {
                 heroDesc.classList.add('scroll-animate', 'fade-in');
