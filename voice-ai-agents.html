@@ -1,0 +1,860 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Agents — Tkrupt</title>
+    <link rel="icon" type="image/png" href="./assets/6.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tkrupt: {
+                            darkteal: '#006666',
+                            coreteal: '#008080',
+                            neonic: '#1DE9B6',
+                            cyberblue: '#00BFFF',
+                            cyberlemon: '#FFE156'
+                        }
+                    }
+                }
+            }
+        } 
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-black text-gray-100 font-sans">
+    <custom-header></custom-header>
+    
+    <section class="relative h-screen overflow-hidden flex items-center justify-center bg-[#01070f] text-center" id="hero">
+        <particle-grid-background></particle-grid-background>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#020a0f]/75 to-[#000000] pointer-events-none"></div>
+        <div class="absolute top-24 left-8 w-64 h-64 bg-[#f9731633] rounded-full blur-3xl opacity-70 animate-pulse"></div>
+        <div class="absolute bottom-20 right-12 w-96 h-96 bg-[#00BFFF29] rounded-full blur-3xl opacity-70 animate-pulse" style="animation-delay:1.8s;"></div>
+        
+        <div class="container mx-auto h-full flex items-center justify-center relative z-10 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#f97316]/30 backdrop-blur-md text-sm font-medium text-[#f97316] mb-8">
+                    <i data-feather="mic" class="w-4 h-4"></i>
+                    <span>Next-Gen Communication</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight mx-auto">
+                    <span class="bg-gradient-to-br from-[#f97316] to-[#fb923c] bg-clip-text text-transparent">AI Voice</span>
+                    <br>
+                    <span class="bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent">Agents</span>
+                </h1>
+                <p class="text-base sm:text-lg md:text-xl mb-10 text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
+                    Automate calls, support, and sales with human-like voice AI that listens, understands, and takes action 24/7.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                    <a href="https://calendly.com/tkrupt-llc/30min" class="hero-cta-primary flex items-center justify-center gap-2 text-lg" style="background: linear-gradient(120deg, #f97316, #fb923c);">
+                        <i data-feather="phone-call" class="w-5 h-5"></i>
+                        <span>Hear a Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-animate fade-in-left">
+                    <h2 class="section-heading mb-6">What Are Voice AI Agents?</h2>
+                    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                        Voice AI Agents are intelligent systems capable of holding natural, real-time conversations with your customers, indistinguishable from human agents.
+                    </p>
+                    <div class="neon-panel p-6" style="border-radius: 1rem;">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-[#f97316]/20 flex items-center justify-center text-[#f97316]">
+                                    <i data-feather="mic" class="w-4 h-4"></i>
+                                </div>
+                                <span class="text-gray-300"><strong>Speech-to-Text:</strong> Instant transcription of caller audio.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-[#00BFFF]/20 flex items-center justify-center text-[#00BFFF]">
+                                    <i data-feather="cpu" class="w-4 h-4"></i>
+                                </div>
+                                <span class="text-gray-300"><strong>Natural Understanding:</strong> Understands context, intent, and nuance.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-[#1DE9B6]/20 flex items-center justify-center text-[#1DE9B6]">
+                                    <i data-feather="volume-2" class="w-4 h-4"></i>
+                                </div>
+                                <span class="text-gray-300"><strong>Human-like TTS:</strong> Responds with ultra-realistic voices.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-[#8b55ff]/20 flex items-center justify-center text-[#8b55ff]">
+                                    <i data-feather="zap" class="w-4 h-4"></i>
+                                </div>
+                                <span class="text-gray-300"><strong>Action Execution:</strong> Triggers APIs, bookings, and DB updates.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="scroll-animate fade-in-right">
+                    <div class="neon-panel flex items-center justify-center" style="min-height: 400px; background: radial-gradient(circle at center, rgba(249, 115, 22, 0.15), transparent 70%);">
+                         <img src="./assets/vapi.png" alt="Voice AI Tech" class="w-full h-auto max-w-sm object-contain opacity-90 drop-shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20 bg-[#020a0f]/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate fade-in-up">
+                <h2 class="section-heading">What Can They Do?</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="service-feature-card scroll-animate fade-in-up stagger-1">
+                    <i data-feather="phone-incoming" class="text-[#f97316] mb-4 w-8 h-8"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Answer Calls</h3>
+                    <p class="text-gray-400 text-sm">Handle inbound customer inquiries instantly, zero wait times.</p>
+                </div>
+                <div class="service-feature-card scroll-animate fade-in-up stagger-2">
+                    <i data-feather="calendar" class="text-[#00BFFF] mb-4 w-8 h-8"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Book Appointments</h3>
+                    <p class="text-gray-400 text-sm">Schedule meetings directly into your calendar while on the phone.</p>
+                </div>
+                <div class="service-feature-card scroll-animate fade-in-up stagger-3">
+                    <i data-feather="help-circle" class="text-[#1DE9B6] mb-4 w-8 h-8"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Handle FAQs 24/7</h3>
+                    <p class="text-gray-400 text-sm">Resolve common questions around the clock without human intervention.</p>
+                </div>
+                <div class="service-feature-card scroll-animate fade-in-up stagger-4">
+                    <i data-feather="user-plus" class="text-[#8b55ff] mb-4 w-8 h-8"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Collect Info</h3>
+                    <p class="text-gray-400 text-sm">Gather lead details, survey responses, and intake forms verbally.</p>
+                </div>
+                <div class="service-feature-card scroll-animate fade-in-up stagger-5">
+                    <i data-feather="corner-up-right" class="text-[#f5c84c] mb-4 w-8 h-8"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Human Handoff</h3>
+                    <p class="text-gray-400 text-sm">Seamlessly transfer complex cases to human agents with context.</p>
+                </div>
+                <div class="service-feature-card scroll-animate fade-in-up stagger-6">
+                    <i data-feather="settings" class="text-[#ff5f6d] mb-4 w-8 h-8"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Trigger Workflows</h3>
+                    <p class="text-gray-400 text-sm">Update CRMs, send emails, or process orders automatically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate fade-in-up">
+                <h2 class="section-heading">Use Cases</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="neon-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-white mb-2">Customer Support</h3>
+                    <p class="text-sm text-gray-400">First-line defense for support teams.</p>
+                </div>
+                <div class="neon-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-white mb-2">Sales & Lead Qual</h3>
+                    <p class="text-sm text-gray-400">Qualify leads before they reach sales reps.</p>
+                </div>
+                <div class="neon-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-white mb-2">Scheduling</h3>
+                    <p class="text-sm text-gray-400">Clinics, salons, and service businesses.</p>
+                </div>
+                <div class="neon-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-white mb-2">IVR Replacement</h3>
+                    <p class="text-sm text-gray-400">No more "Press 1 for Sales". Just speak.</p>
+                </div>
+                <div class="neon-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-white mb-2">Internal Assistants</h3>
+                    <p class="text-sm text-gray-400">Voice-activated help for field workers.</p>
+                </div>
+                <div class="neon-panel p-6 rounded-2xl">
+                    <h3 class="text-lg font-bold text-white mb-2">Healthcare</h3>
+                    <p class="text-sm text-gray-400">Patient intake and appointment reminders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20 bg-[#020a0f]/50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-animate fade-in-left">
+                     <div class="grid grid-cols-2 gap-4">
+                        <div class="neon-panel p-4 text-center">
+                            <span class="text-[#1DE9B6] font-bold block mb-1">Human-like</span>
+                            <span class="text-xs text-gray-400">Natural Pauses</span>
+                        </div>
+                        <div class="neon-panel p-4 text-center">
+                            <span class="text-[#00BFFF] font-bold block mb-1">Polyglot</span>
+                            <span class="text-xs text-gray-400">Multi-language</span>
+                        </div>
+                        <div class="neon-panel p-4 text-center">
+                            <span class="text-[#f97316] font-bold block mb-1">Memory</span>
+                            <span class="text-xs text-gray-400">Context Aware</span>
+                        </div>
+                         <div class="neon-panel p-4 text-center">
+                            <span class="text-[#8b55ff] font-bold block mb-1">Secure</span>
+                            <span class="text-xs text-gray-400">SOC2 Compliant</span>
+                        </div>
+                     </div>
+                </div>
+                <div class="scroll-animate fade-in-right">
+                    <h2 class="section-heading mb-6">Key Features</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <i data-feather="check-circle" class="text-[#1DE9B6]"></i>
+                            <span class="text-gray-300"><strong>Natural Speech:</strong> Includes "ums", "ahs", and latency < 800ms.</span>
+                        </li>
+                         <li class="flex items-center gap-3">
+                            <i data-feather="check-circle" class="text-[#1DE9B6]"></i>
+                            <span class="text-gray-300"><strong>Emotion Detection:</strong> Adapts tone based on caller sentiment.</span>
+                        </li>
+                         <li class="flex items-center gap-3">
+                            <i data-feather="check-circle" class="text-[#1DE9B6]"></i>
+                            <span class="text-gray-300"><strong>CRM Integration:</strong> Logs calls and updates records instantly.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate fade-in-up">
+                <h2 class="section-heading">Build Process & Stack</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">How We Build</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-[#f97316] text-black font-bold flex items-center justify-center flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-gray-200">Design</h4>
+                                <p class="text-sm text-gray-400">Use-case mapping & conversation flow design.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-[#f97316] text-black font-bold flex items-center justify-center flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-gray-200">Select & Integrate</h4>
+                                <p class="text-sm text-gray-400">Voice selection, LLM integration, and STT tuning.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-[#f97316] text-black font-bold flex items-center justify-center flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-gray-200">Connect Backend</h4>
+                                <p class="text-sm text-gray-400">API hooks for booking, CRM, and data fetching.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-[#f97316] text-black font-bold flex items-center justify-center flex-shrink-0">4</div>
+                            <div>
+                                <h4 class="font-bold text-gray-200">Deploy</h4>
+                                <p class="text-sm text-gray-400">Live testing, phone number provisioning, and monitoring.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Technology Stack</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-[#1a1f2e] p-3 rounded-lg flex items-center gap-2">
+                             <img src="./assets/vapi.png" class="w-6 h-6 object-contain"> <span class="text-sm">Vapi / Bland</span>
+                        </div>
+                         <div class="bg-[#1a1f2e] p-3 rounded-lg flex items-center gap-2">
+                             <img src="./assets/openai.png" class="w-6 h-6 object-contain"> <span class="text-sm">OpenAI / Gemini</span>
+                        </div>
+                         <div class="bg-[#1a1f2e] p-3 rounded-lg flex items-center gap-2">
+                             <img src="./assets/eleven.png" class="w-6 h-6 object-contain"> <span class="text-sm">ElevenLabs</span>
+                        </div>
+                         <div class="bg-[#1a1f2e] p-3 rounded-lg flex items-center gap-2">
+                             <img src="./assets/webrtc.png" class="w-6 h-6 object-contain"> <span class="text-sm">Twilio / WebRTC</span>
+                        </div>
+                         <div class="bg-[#1a1f2e] p-3 rounded-lg flex items-center gap-2">
+                             <img src="./assets/fast.png" class="w-6 h-6 object-contain"> <span class="text-sm">FastAPI</span>
+                        </div>
+                         <div class="bg-[#1a1f2e] p-3 rounded-lg flex items-center gap-2">
+                             <img src="./assets/aws.png" class="w-6 h-6 object-contain"> <span class="text-sm">Cloud Hosting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20 bg-gradient-to-t from-[#020a0f] to-transparent">
+        <div class="container mx-auto px-4">
+             <div class="grid md:grid-cols-2 gap-12">
+                 <div class="neon-panel p-8">
+                     <h3 class="text-xl font-bold text-white mb-4">Customization Options</h3>
+                     <ul class="space-y-3 text-gray-400 text-sm">
+                         <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#f97316] rounded-full"></div> Custom Conversation Flows</li>
+                         <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#f97316] rounded-full"></div> Brand-Specific Voice Cloning</li>
+                         <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#f97316] rounded-full"></div> Business Logic & API Integration</li>
+                         <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-[#f97316] rounded-full"></div> Multi-Channel (Phone, Web, App)</li>
+                     </ul>
+                 </div>
+                 
+                 <div class="neon-panel p-8" style="border-color: rgba(249, 115, 22, 0.3);">
+                     <h3 class="text-xl font-bold text-white mb-4">Why Our Voice AI?</h3>
+                      <ul class="space-y-3 text-gray-400 text-sm">
+                         <li class="flex items-center gap-2"><i data-feather="star" class="w-4 h-4 text-[#f97316]"></i> Human-Centric Conversation Design</li>
+                         <li class="flex items-center gap-2"><i data-feather="zap" class="w-4 h-4 text-[#f97316]"></i> Real-Time Responses (<1s Latency)</li>
+                         <li class="flex items-center gap-2"><i data-feather="trending-up" class="w-4 h-4 text-[#f97316]"></i> Business-Ready Scalable Deployment</li>
+                         <li class="flex items-center gap-2"><i data-feather="tool" class="w-4 h-4 text-[#f97316]"></i> Ongoing Optimization & Tuning</li>
+                     </ul>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-heading mb-6 scroll-animate fade-in-up">Deploy Your Voice Agent Today</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 scroll-animate scale-in">
+                <a href="https://calendly.com/tkrupt-llc/30min" class="hero-cta-primary flex items-center justify-center gap-2 text-lg" style="background: linear-gradient(120deg, #f97316, #fb923c)">
+                    <i data-feather="mic" class="w-5 h-5"></i>
+                    <span>Book a Demo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script/particle-grid.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Agents — Tkrupt</title>
+    <link rel="icon" type="image/png" href="./assets/6.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tkrupt: {
+                            darkteal: '#006666',
+                            coreteal: '#008080',
+                            neonic: '#1DE9B6',
+                            cyberblue: '#00BFFF',
+                            cyberlemon: '#FFE156'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="bg-black text-gray-100 font-sans">
+    <custom-header></custom-header>
+
+    <section class="relative h-screen overflow-hidden flex items-center justify-center bg-[#01070f] text-center"
+        id="hero">
+        <particle-grid-background></particle-grid-background>
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent via-[#020a0f]/75 to-[#000000] pointer-events-none">
+        </div>
+        <div class="absolute top-24 left-8 w-64 h-64 bg-[#0ad4bf33] rounded-full blur-3xl opacity-70 animate-pulse">
+        </div>
+        <div class="absolute bottom-20 right-12 w-96 h-96 bg-[#8b55ff33] rounded-full blur-3xl opacity-70 animate-pulse"
+            style="animation-delay:1.8s;"></div>
+
+        <div class="container mx-auto h-full flex items-center justify-center relative z-10 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#05e3cf]/30 backdrop-blur-md text-sm font-medium text-[#05e3cf] mb-8">
+                    <i data-feather="mic" class="w-4 h-4 text-[#f5c84c]"></i>
+                    <span>Next-Gen Communication</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-normal mx-auto py-4">
+                    <span class="bg-gradient-to-br from-[#008080] to-[#1DE9B6] bg-clip-text text-transparent">AI</span>
+                    <span
+                        class="bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent">Voice</span>
+                    <br>
+                    <span
+                        class="bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent py-4">Agents</span>
+                </h1>
+
+                <p class="text-base sm:text-lg md:text-xl mb-10 text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
+                    Automate calls, support, and sales with human-like voice AI that listens, understands, and takes
+                    action 24/7—indistinguishable from a human.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                    <a href="https://calendly.com/tkrupt-llc/30min"
+                        class="hero-cta-primary flex items-center justify-center gap-2 text-lg"
+                        style="background: linear-gradient(120deg, #05e3cf, #00a6ff);">
+                        <span>Book a Call</span>
+                        <i data-feather="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="ai-solutions.html"
+                        class="hero-cta-secondary flex items-center justify-center gap-2 text-lg">
+                        <span>Explore Solutions</span>
+                        <i data-feather="grid" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20 bg-[#020a0f]/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate fade-in-up">
+                <h2 class="section-heading">Problems We Solve</h2>
+                <p class="section-subtitle">Addressing the gaps in traditional phone communication.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-1">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #ef4444, #f87171); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="phone-missed" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Calls That Don’t Convert</h3>
+                    <p class="text-base text-slate-200/85 leading-relaxed">
+                        Guide conversations toward clear next steps like bookings or upgrades, increasing successful
+                        outcomes without sounding scripted.
+                    </p>
+                </div>
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-2">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #3b82f6, #0ea5e9); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="help-circle" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Knowledge Gaps on Live Calls</h3>
+                    <p class="text-base text-slate-200/85 leading-relaxed">
+                        Instantly pull accurate policies and pricing from your systems, ensuring callers get correct
+                        answers without delays or hold times.
+                    </p>
+                </div>
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-3">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #8b5cf6, #a78bfa); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="refresh-cw" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Inconsistent Follow-Through</h3>
+                    <p class="text-base text-slate-200/85 leading-relaxed">
+                        Automate post-call actions like scheduling, ticket creation, and CRM updates immediately so no
+                        opportunity slips through the cracks.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20 relative overflow-hidden" id="build-process-section">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-24 scroll-animate fade-in-up">
+                <h2 class="section-heading">Our Voice AI Build Process</h2>
+                <p class="section-subtitle">From first call to production-scale deployment.</p>
+            </div>
+
+            <div class="relative max-w-5xl mx-auto">
+                <div class="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-1 h-full hidden md:block z-0">
+                    <svg height="100%" width="4" class="overflow-visible">
+                        <path id="pipeline-bg" d="" stroke="#1e293b" stroke-width="4" fill="none"
+                            stroke-linecap="round" />
+                        <path id="pipeline-fill" d="" stroke="url(#processGradient)" stroke-width="4" fill="none"
+                            stroke-linecap="round" stroke-dasharray="0 10000" />
+                        <defs>
+                            <linearGradient id="processGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#f97316" />
+                                <stop offset="100%" stop-color="#8b55ff" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div class="space-y-24" id="pipeline-steps">
+
+                    <div class="pipeline-step relative flex md:justify-between items-center group" data-color="#f97316">
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#020a0f] border-2 border-[#1e293b] z-10 transition-colors duration-500 hidden md:block"
+                            data-index="1"></div>
+                        <div class="md:w-[45%] w-full">
+                            <div
+                                class="neon-panel p-8 rounded-xl border border-[#1e293b] transition-all duration-500 transform group-hover:-translate-y-1 relative">
+                                <div
+                                    class="absolute top-8 -right-3 w-6 h-6 bg-[#020a0f] border-t border-r border-[#f97316]/50 rotate-45 hidden md:block">
+                                </div>
+                                <div class="text-[#f97316] font-bold text-lg mb-2">01. Strategy</div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Use-Case Definition</h3>
+                                <p class="text-slate-300/85 leading-relaxed">
+                                    We start by defining where voice AI adds the most value—support, sales, scheduling,
+                                    or qualification. Call goals, success metrics, and handoff points are clearly
+                                    mapped.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="md:w-[45%] hidden md:block"></div>
+                    </div>
+
+                    <div class="pipeline-step relative flex md:justify-between items-center group" data-color="#00BFFF">
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#020a0f] border-2 border-[#1e293b] z-10 transition-colors duration-500 hidden md:block"
+                            data-index="2"></div>
+                        <div class="md:w-[45%] hidden md:block"></div>
+                        <div class="md:w-[45%] w-full">
+                            <div
+                                class="neon-panel p-8 rounded-xl border border-[#1e293b] transition-all duration-500 transform group-hover:-translate-y-1 relative">
+                                <div
+                                    class="absolute top-8 -left-3 w-6 h-6 bg-[#020a0f] border-b border-l border-[#00BFFF]/50 rotate-45 hidden md:block">
+                                </div>
+                                <div class="text-[#00BFFF] font-bold text-lg mb-2">02. Design</div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Conversation Flows</h3>
+                                <p class="text-slate-300/85 leading-relaxed">
+                                    We design natural flows based on real call scenarios, including interruptions and
+                                    edge cases. Business rules and tone guidelines are embedded directly into the logic.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-step relative flex md:justify-between items-center group" data-color="#1DE9B6">
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#020a0f] border-2 border-[#1e293b] z-10 transition-colors duration-500 hidden md:block"
+                            data-index="3"></div>
+                        <div class="md:w-[45%] w-full">
+                            <div
+                                class="neon-panel p-8 rounded-xl border border-[#1e293b] transition-all duration-500 transform group-hover:-translate-y-1 relative">
+                                <div
+                                    class="absolute top-8 -right-3 w-6 h-6 bg-[#020a0f] border-t border-r border-[#1DE9B6]/50 rotate-45 hidden md:block">
+                                </div>
+                                <div class="text-[#1DE9B6] font-bold text-lg mb-2">03. Integration</div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Knowledge Systems</h3>
+                                <p class="text-slate-300/85 leading-relaxed">
+                                    The agent is connected to your data sources—CRMs, ticketing systems, and
+                                    calendars—so every response is accurate, contextual, and actionable.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="md:w-[45%] hidden md:block"></div>
+                    </div>
+
+                    <div class="pipeline-step relative flex md:justify-between items-center group" data-color="#8b55ff">
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#020a0f] border-2 border-[#1e293b] z-10 transition-colors duration-500 hidden md:block"
+                            data-index="4"></div>
+                        <div class="md:w-[45%] hidden md:block"></div>
+                        <div class="md:w-[45%] w-full">
+                            <div
+                                class="neon-panel p-8 rounded-xl border border-[#1e293b] transition-all duration-500 transform group-hover:-translate-y-1 relative">
+                                <div
+                                    class="absolute top-8 -left-3 w-6 h-6 bg-[#020a0f] border-b border-l border-[#8b55ff]/50 rotate-45 hidden md:block">
+                                </div>
+                                <div class="text-[#8b55ff] font-bold text-lg mb-2">04. Optimization</div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Voice Tuning</h3>
+                                <p class="text-slate-300/85 leading-relaxed">
+                                    We fine-tune speech quality, pacing, turn-taking, and latency to ensure
+                                    conversations feel natural. This includes voice cloning and interruption handling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-step relative flex md:justify-between items-center group" data-color="#f59e0b">
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#020a0f] border-2 border-[#1e293b] z-10 transition-colors duration-500 hidden md:block"
+                            data-index="5"></div>
+                        <div class="md:w-[45%] w-full">
+                            <div
+                                class="neon-panel p-8 rounded-xl border border-[#1e293b] transition-all duration-500 transform group-hover:-translate-y-1 relative">
+                                <div
+                                    class="absolute top-8 -right-3 w-6 h-6 bg-[#020a0f] border-t border-r border-[#f59e0b]/50 rotate-45 hidden md:block">
+                                </div>
+                                <div class="text-[#f59e0b] font-bold text-lg mb-2">05. Validation</div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Real-World Testing</h3>
+                                <p class="text-slate-300/85 leading-relaxed">
+                                    Tested against real scenarios: background noise, accents, unexpected inputs, and
+                                    failure cases—ensuring reliability under production conditions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="md:w-[45%] hidden md:block"></div>
+                    </div>
+
+                    <div class="pipeline-step relative flex md:justify-between items-center group" data-color="#0ea5e9">
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#020a0f] border-2 border-[#1e293b] z-10 transition-colors duration-500 hidden md:block"
+                            data-index="6"></div>
+                        <div class="md:w-[45%] hidden md:block"></div>
+                        <div class="md:w-[45%] w-full">
+                            <div
+                                class="neon-panel p-8 rounded-xl border border-[#1e293b] transition-all duration-500 transform group-hover:-translate-y-1 relative">
+                                <div
+                                    class="absolute top-8 -left-3 w-6 h-6 bg-[#020a0f] border-b border-l border-[#0ea5e9]/50 rotate-45 hidden md:block">
+                                </div>
+                                <div class="text-[#0ea5e9] font-bold text-lg mb-2">06. Launch</div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Deployment</h3>
+                                <p class="text-slate-300/85 leading-relaxed">
+                                    We deploy the voice agent into your telephony environment with live monitoring,
+                                    logging, and performance tracking to ensure stability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-step relative flex md:justify-between items-center group" data-color="#d946ef">
+                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#020a0f] border-2 border-[#1e293b] z-10 transition-colors duration-500 hidden md:block"
+                            data-index="7"></div>
+                        <div class="md:w-[45%] w-full">
+                            <div
+                                class="neon-panel p-8 rounded-xl border border-[#1e293b] transition-all duration-500 transform group-hover:-translate-y-1 relative">
+                                <div
+                                    class="absolute top-8 -right-3 w-6 h-6 bg-[#020a0f] border-t border-r border-[#d946ef]/50 rotate-45 hidden md:block">
+                                </div>
+                                <div class="text-[#d946ef] font-bold text-lg mb-2">07. Scale</div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Continuous Improvement</h3>
+                                <p class="text-slate-300/85 leading-relaxed">
+                                    Post-launch, we analyze conversations, refine flows, retrain models, and scale
+                                    capacity as call volumes grow—without disrupting operations.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="md:w-[45%] hidden md:block"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const section = document.getElementById('build-process-section');
+                const steps = document.getElementById('pipeline-steps');
+                const pathBg = document.getElementById('pipeline-bg');
+                const pathFill = document.getElementById('pipeline-fill');
+
+                const stepElements = document.querySelectorAll('.pipeline-step');
+                const nodes = document.querySelectorAll('.pipeline-step .absolute.rounded-full');
+                const cards = document.querySelectorAll('.pipeline-step .neon-panel');
+
+                function updatePath() {
+                    if (!steps || !pathBg || !pathFill) return;
+                    const height = steps.offsetHeight;
+                    const d = `M 2 ${0} L 2 ${height}`;
+                    pathBg.setAttribute('d', d);
+                    pathFill.setAttribute('d', d);
+                    const length = pathFill.getTotalLength();
+                    pathFill.style.strokeDasharray = length;
+                    pathFill.style.strokeDashoffset = length;
+                    return length;
+                }
+
+                let totalLength = updatePath();
+                window.addEventListener('resize', () => {
+                    totalLength = updatePath();
+                });
+
+                window.addEventListener('scroll', () => {
+                    if (!section) return;
+
+                    const rect = steps.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+
+                    let progress = (windowHeight / 2 - rect.top);
+                    if (progress < 0) progress = 0;
+                    if (progress > totalLength) progress = totalLength;
+
+                    pathFill.style.strokeDashoffset = totalLength - progress;
+
+                    stepElements.forEach((step, index) => {
+                        const node = nodes[index];
+                        const card = cards[index];
+                        const color = step.dataset.color || '#1DE9B6';
+                        const nodeTop = node.getBoundingClientRect().top - rect.top;
+
+                        if (progress >= nodeTop) {
+                            node.style.borderColor = color;
+                            node.style.backgroundColor = color;
+                            node.style.boxShadow = `0 0 15px ${color}`;
+                            if (card) {
+                                card.style.borderColor = color;
+                                card.style.boxShadow = `0 0 20px ${color}33`;
+                            }
+                        } else {
+                            node.style.borderColor = '#1e293b';
+                            node.style.backgroundColor = '#020a0f';
+                            node.style.boxShadow = 'none';
+                            if (card) {
+                                card.style.borderColor = '#1e293b';
+                                card.style.boxShadow = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+    </section>
+
+    <section class="thematic-section py-20 bg-[#020a0f]/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate fade-in-up">
+                <h2 class="section-heading">Real-Life Use Cases</h2>
+                <p class="section-subtitle">Automating conversations across industries.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-1">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #f97316, #fb923c); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="phone-incoming" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Inbound Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Tier-1 support agent that answers instantly,
+                        resolves FAQs, and routes complex calls.</p>
+                </div>
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-2">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #00BFFF, #38bdf8); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="target" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Lead Qualification</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Outbound agent calling leads within seconds of
+                        signup to qualify and book meetings.</p>
+                </div>
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-3">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #1DE9B6, #2dd4bf); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="calendar" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Clinic Scheduling</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Handling appointment bookings, cancellations, and
+                        rescheduling for doctors/dentists.</p>
+                </div>
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-4">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #8b55ff, #a78bfa); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="shopping-bag" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Restaurant Ordering</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Taking phone orders accurately, handling
+                        modifications, and integrating with POS.</p>
+                </div>
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-5">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #f5c84c, #fbbf24); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="file-text" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Insurance FNOL</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">First Notice of Loss intake agent collecting
+                        accident details compassionately.</p>
+                </div>
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-6">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #ff5f6d, #fca5a5); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="home" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Real Estate ISA</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Following up with buyers, answering property
+                        questions, and coordinating viewings.</p>
+                </div>
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-7">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #0ea5e9, #38bdf8); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="dollar-sign" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Debt Collection</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Respectful, compliant payment reminders and
+                        negotiation of payment plans.</p>
+                </div>
+
+                <div class="neon-panel neon-hover-effect scroll-animate fade-in-up stagger-8">
+                    <div class="neon-icon-wrapper">
+                        <div class="neon-icon"
+                            style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: linear-gradient(135deg, #d946ef, #e879f9); display: flex; align-items: center; justify-content: center;">
+                            <i data-feather="users" style="width: 28px; height: 28px; color: white;"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Recruitment Screen</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Initial phone screen to verify candidate experience
+                        and availability.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="thematic-section py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-heading mb-6">Deploy Your Voice Agent Today</h2>
+            <p class="section-subtitle mb-8 max-w-3xl mx-auto">
+                From custom-designed voice agents to deep telephony and CRM integrations, we deliver voice AI solutions
+                that improve conversion, resolution, and customer experience.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://calendly.com/tkrupt-llc/30min"
+                    class="hero-cta-primary flex items-center justify-center gap-2 text-lg"
+                    style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
+                    <i data-feather="calendar" class="w-5 h-5"></i>
+                    <span>Book a Strategy Call</span>
+                </a>
+                <a href="#contact" class="hero-cta-secondary flex items-center justify-center gap-2 text-lg">
+                    <i data-feather="mail" class="w-5 h-5"></i>
+                    <span>Contact Our Team</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <custom-footer></custom-footer>
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script/particle-grid.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
