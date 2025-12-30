@@ -551,7 +551,7 @@ class StrategySection extends HTMLElement {
         }
       </style>
 
-      <div class="bg-orbit" aria-hidden="true"></div>
+      <div class="thematic-section py-20" aria-hidden="true"></div>
 
       <div class="container">
         <header class="header">

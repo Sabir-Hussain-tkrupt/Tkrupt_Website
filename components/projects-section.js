@@ -1609,7 +1609,7 @@ class ProjectsSection extends HTMLElement {
         }
       </style>
 
-      <div class="bg-orbit" aria-hidden="true"></div>
+      <div class="thematic-section py-20" aria-hidden="true"></div>
       <div class="container">
         <div class="header">
           <h2>Featured Projects</h2>
