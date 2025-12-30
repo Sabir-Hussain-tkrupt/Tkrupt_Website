@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,36 +23,54 @@
                     }
                 }
             }
-        } 
-    </script> 
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body class="bg-black text-gray-100 font-sans">
     <custom-header></custom-header>
-    
+
     <!-- Hero Section -->
-    <section class="relative h-screen overflow-hidden flex items-center justify-center bg-[#01070f] text-center" id="hero">
+    <section class="relative h-screen overflow-hidden flex items-center justify-center bg-[#01070f] text-center"
+        id="hero">
         <particle-grid-background></particle-grid-background>
         <!-- Gradient overlays -->
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#020a0f]/75 to-[#000000] pointer-events-none"></div>
-        <div class="absolute top-24 left-8 w-64 h-64 bg-[#0ad4bf33] rounded-full blur-3xl opacity-70 animate-pulse"></div>
-        <div class="absolute bottom-20 right-12 w-96 h-96 bg-[#0098ff29] rounded-full blur-3xl opacity-70 animate-pulse" style="animation-delay:1.8s;"></div>
-        <div class="absolute top-1/3 left-1/2 w-72 h-72 bg-[#7c3aed33] rounded-full blur-3xl opacity-60 animate-pulse" style="animation-delay:3s;"></div>
-        
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent via-[#020a0f]/75 to-[#000000] pointer-events-none">
+        </div>
+        <div class="absolute top-24 left-8 w-64 h-64 bg-[#0ad4bf33] rounded-full blur-3xl opacity-70 animate-pulse">
+        </div>
+        <div class="absolute bottom-20 right-12 w-96 h-96 bg-[#0098ff29] rounded-full blur-3xl opacity-70 animate-pulse"
+            style="animation-delay:1.8s;"></div>
+        <div class="absolute top-1/3 left-1/2 w-72 h-72 bg-[#7c3aed33] rounded-full blur-3xl opacity-60 animate-pulse"
+            style="animation-delay:3s;"></div>
+
         <div class="container mx-auto h-full flex items-center justify-center relative z-10 px-4">
             <div class="max-w-4xl mx-auto">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#05e3cf]/30 backdrop-blur-md text-sm font-medium text-[#05e3cf] mb-8">
+                    <i data-feather="tool" class="w-4 h-4 text-[#f5c84c]"></i>
+                    <span>Build & Deploy</span>
+                </div>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight mx-auto">
-                    <span class="bg-gradient-to-br from-[#008080] to-[#1DE9B6] bg-clip-text text-transparent">Ready-to-Run</span>
-                    <span class="bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent">Intelligent</span>
+                    <span
+                        class="bg-gradient-to-br from-[#008080] to-[#1DE9B6] bg-clip-text text-transparent">Ready-to-Run</span>
+                    <span
+                        class="bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent">Intelligent</span>
                     <br>
-                    <span class="bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent">Systems</span>
+                    <span
+                        class="bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent">Systems</span>
                 </h1>
                 <p class="text-base sm:text-lg md:text-xl mb-10 text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
-                    We design AI and automation solutions that solve real business problems, streamline operations, and deliver measurable results across industries.
+                    We design AI and automation solutions that solve real business problems, streamline operations, and
+                    deliver measurable results across industries.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                    <a href="https://calendly.com/tkrupt-llc/30min" class="hero-cta-primary flex items-center justify-center gap-2 text-lg" style="background: linear-gradient(120deg, #05e3cf, #00a6ff);">
+                    <a href="https://calendly.com/tkrupt-llc/30min"
+                        class="hero-cta-primary flex items-center justify-center gap-2 text-lg"
+                        style="background: linear-gradient(120deg, #05e3cf, #00a6ff);">
                         <i data-feather="calendar" class="w-5 h-5"></i>
                         <span>Book a Strategy Call</span>
                     </a>
@@ -61,7 +80,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="absolute bottom-16 w-full flex justify-center animate-bounce">
                 <a href="#services" class="inline-flex items-center justify-center">
                     <i data-feather="chevron-down" class="text-[#00a6ff] w-10 h-10"></i>
@@ -86,15 +105,18 @@
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="scroll-animate fade-in-left">
                         <div class="service-icon-large mb-6">
-                            <div class="w-24 h-24 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, rgba(139, 85, 255, 0.2), rgba(0, 185, 255, 0.2)); border: 2px solid rgba(139, 85, 255, 0.4);">
+                            <div class="w-24 h-24 rounded-2xl flex items-center justify-center"
+                                style="background: linear-gradient(135deg, rgba(139, 85, 255, 0.2), rgba(0, 185, 255, 0.2)); border: 2px solid rgba(139, 85, 255, 0.4);">
                                 <i data-feather="bar-chart-2" style="width: 48px; height: 48px; stroke: #8B55FF;"></i>
                             </div>
                         </div>
-                        <h2 class="text-4xl font-bold mb-4" style="background: linear-gradient(120deg, #8B55FF, #00BFFF); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        <h2 class="text-4xl font-bold mb-4"
+                            style="background: linear-gradient(120deg, #8B55FF, #00BFFF); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
                             Machine Learning & Predictive Analytics
                         </h2>
                         <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                            Turn data into foresight. We build predictive models that forecast trends, surface risks, and power smarter decisions across your business.
+                            Turn data into foresight. We build predictive models that forecast trends, surface risks,
+                            and power smarter decisions across your business.
                         </p>
                         <div class="space-y-3">
                             <div class="flex items-center gap-3 scroll-animate fade-in-up stagger-1">
@@ -114,9 +136,11 @@
                                 <span class="text-gray-300">Operational dashboards & reporting</span>
                             </div>
                         </div>
-                        <div class="mt-6 p-4 rounded-lg" style="background: rgba(139, 85, 255, 0.1); border: 1px solid rgba(139, 85, 255, 0.3);">
+                        <div class="mt-6 p-4 rounded-lg"
+                            style="background: rgba(139, 85, 255, 0.1); border: 1px solid rgba(139, 85, 255, 0.3);">
                             <p class="text-sm text-gray-300">
-                                Our goal is to help your teams <strong class="text-[#8B55FF]">move from gut-feel to evidence</strong> with fast, trustworthy predictions.
+                                Our goal is to help your teams <strong class="text-[#8B55FF]">move from gut-feel to
+                                    evidence</strong> with fast, trustworthy predictions.
                             </p>
                         </div>
                     </div>
@@ -129,31 +153,36 @@
                                         <i data-feather="trending-up" class="w-5 h-5" style="stroke: #8B55FF;"></i>
                                         Revenue & growth forecasting
                                     </h4>
-                                    <p class="text-gray-400 text-sm">Forecast demand, pipeline, and churn to plan confidently.</p>
+                                    <p class="text-gray-400 text-sm">Forecast demand, pipeline, and churn to plan
+                                        confidently.</p>
                                 </div>
                                 <div class="service-detail-item">
                                     <h4 class="font-semibold text-white mb-2 flex items-center gap-2">
                                         <i data-feather="cpu" class="w-5 h-5" style="stroke: #00BFFF;"></i>
                                         Model tuning & deployment
                                     </h4>
-                                    <p class="text-gray-400 text-sm">Productionize models with monitoring, drift detection, and guardrails.</p>
+                                    <p class="text-gray-400 text-sm">Productionize models with monitoring, drift
+                                        detection, and guardrails.</p>
                                 </div>
                                 <div class="service-detail-item">
                                     <h4 class="font-semibold text-white mb-2 flex items-center gap-2">
                                         <i data-feather="alert-triangle" class="w-5 h-5" style="stroke: #1DE9B6;"></i>
                                         Quality & fraud controls
                                     </h4>
-                                    <p class="text-gray-400 text-sm">Spot anomalies, compliance risks, and data issues in real time.</p>
+                                    <p class="text-gray-400 text-sm">Spot anomalies, compliance risks, and data issues
+                                        in real time.</p>
                                 </div>
                                 <div class="service-detail-item">
                                     <h4 class="font-semibold text-white mb-2 flex items-center gap-2">
                                         <i data-feather="pie-chart" class="w-5 h-5" style="stroke: #7426EF;"></i>
                                         Insightful storytelling
                                     </h4>
-                                    <p class="text-gray-400 text-sm">Visuals and narratives that make data actionable for stakeholders.</p>
+                                    <p class="text-gray-400 text-sm">Visuals and narratives that make data actionable
+                                        for stakeholders.</p>
                                 </div>
                             </div>
-                            <div class="mt-6 p-4 rounded-lg" style="background: rgba(139, 85, 255, 0.1); border: 1px solid rgba(139, 85, 255, 0.3);">
+                            <div class="mt-6 p-4 rounded-lg"
+                                style="background: rgba(139, 85, 255, 0.1); border: 1px solid rgba(139, 85, 255, 0.3);">
                                 <p class="text-sm text-gray-300">
                                     Deploy outcomes-focused analytics that teams can trust and use daily.
                                 </p>
@@ -165,7 +194,8 @@
         </div>
 
         <div class="text-center mt-12">
-            <a href="https://calendly.com/tkrupt-llc/30min" class="strategy-cta-btn" style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
+            <a href="https://calendly.com/tkrupt-llc/30min" class="strategy-cta-btn"
+                style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
                 <span>Start Your ML Project</span>
                 <span style="font-size: 1.1rem;">↗</span>
             </a>
@@ -178,70 +208,84 @@
         <div class="container mx-auto px-4">
             <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-12 scroll-animate fade-in-up">
-                    <h2 class="text-4xl font-bold mb-4" style="background: linear-gradient(120deg, #7426EF, #8B55FF); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    <h2 class="text-4xl font-bold mb-4"
+                        style="background: linear-gradient(120deg, #7426EF, #8B55FF); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
                         Large Language Models (LLMs) & Conversational AI
                     </h2>
                     <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        Build assistants, copilots, and knowledge systems that converse naturally, stay grounded, and act safely across your stack.
+                        Build assistants, copilots, and knowledge systems that converse naturally, stay grounded, and
+                        act safely across your stack.
                     </p>
                 </div>
                 <div class="neon-panel" style="padding: 3rem; border-radius: 2rem;">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="service-feature-card scroll-animate fade-in-up stagger-1">
                             <div class="flex items-start gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center" style="background: rgba(116, 38, 239, 0.2); border: 1px solid rgba(116, 38, 239, 0.4);">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center"
+                                    style="background: rgba(116, 38, 239, 0.2); border: 1px solid rgba(116, 38, 239, 0.4);">
                                     <i data-feather="edit-3" style="width: 24px; height: 24px; stroke: #7426EF;"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-white mb-2">Generation & summarization</h4>
-                                    <p class="text-gray-400 text-sm">High-quality content, responses, and briefs with tone and brand controls.</p>
+                                    <p class="text-gray-400 text-sm">High-quality content, responses, and briefs with
+                                        tone and brand controls.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="service-feature-card scroll-animate fade-in-up stagger-2">
                             <div class="flex items-start gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center" style="background: rgba(0, 185, 255, 0.2); border: 1px solid rgba(0, 185, 255, 0.4);">
-                                    <i data-feather="help-circle" style="width: 24px; height: 24px; stroke: #00BFFF;"></i>
+                                <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center"
+                                    style="background: rgba(0, 185, 255, 0.2); border: 1px solid rgba(0, 185, 255, 0.4);">
+                                    <i data-feather="help-circle"
+                                        style="width: 24px; height: 24px; stroke: #00BFFF;"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-white mb-2">Knowledge-grounded Q&A</h4>
-                                    <p class="text-gray-400 text-sm">RAG and search that cite sources and keep responses factual.</p>
+                                    <p class="text-gray-400 text-sm">RAG and search that cite sources and keep responses
+                                        factual.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="service-feature-card scroll-animate fade-in-up stagger-3">
                             <div class="flex items-start gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center" style="background: rgba(4, 215, 194, 0.2); border: 1px solid rgba(4, 215, 194, 0.4);">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center"
+                                    style="background: rgba(4, 215, 194, 0.2); border: 1px solid rgba(4, 215, 194, 0.4);">
                                     <i data-feather="search" style="width: 24px; height: 24px; stroke: #1DE9B6;"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-white mb-2">Voice & chat agents</h4>
-                                    <p class="text-gray-400 text-sm">Multimodal agents with guardrails, escalation paths, and analytics.</p>
+                                    <p class="text-gray-400 text-sm">Multimodal agents with guardrails, escalation
+                                        paths, and analytics.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="service-feature-card scroll-animate fade-in-up stagger-4">
                             <div class="flex items-start gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center" style="background: rgba(139, 85, 255, 0.2); border: 1px solid rgba(139, 85, 255, 0.4);">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center"
+                                    style="background: rgba(139, 85, 255, 0.2); border: 1px solid rgba(139, 85, 255, 0.4);">
                                     <i data-feather="server" style="width: 24px; height: 24px; stroke: #8B55FF;"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-white mb-2">Custom LLM deployment</h4>
-                                    <p class="text-gray-400 text-sm">Fine-tuned or instruction-tuned models, hosted with monitoring and policy checks.</p>
+                                    <p class="text-gray-400 text-sm">Fine-tuned or instruction-tuned models, hosted with
+                                        monitoring and policy checks.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-8 text-center p-6 rounded-xl" style="background: rgba(116, 38, 239, 0.1); border: 1px solid rgba(116, 38, 239, 0.3);">
+                    <div class="mt-8 text-center p-6 rounded-xl"
+                        style="background: rgba(116, 38, 239, 0.1); border: 1px solid rgba(116, 38, 239, 0.3);">
                         <p class="text-gray-300">
-                            Ideal for teams that need <strong class="text-[#7426EF]">human-like interaction, reliable answers, and safe automation</strong>.
+                            Ideal for teams that need <strong class="text-[#7426EF]">human-like interaction, reliable
+                                answers, and safe automation</strong>.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="text-center mt-12">
-            <a href="https://calendly.com/tkrupt-llc/30min" class="strategy-cta-btn" style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
+            <a href="https://calendly.com/tkrupt-llc/30min" class="strategy-cta-btn"
+                style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
                 <span>Create Your AI Assistant</span>
                 <span style="font-size: 1.1rem;">↗</span>
             </a>
@@ -253,103 +297,128 @@
         <div class="container mx-auto px-4">
             <div class="max-w-5xl mx-auto mb-12 text-center">
                 <h2 class="section-heading">AI Capability Stacks</h2>
-                <p class="section-subtitle max-w-3xl mx-auto">Curated, battle-tested packages that combine data, models, and workflows to ship faster.</p>
-                </div>
+                <p class="section-subtitle max-w-3xl mx-auto">Curated, battle-tested packages that combine data, models,
+                    and workflows to ship faster.</p>
+            </div>
             <div class="space-y-6 max-w-4xl mx-auto">
-            <div class="space-y-6 max-w-4xl mx-auto">
-                <div class="neon-panel flex flex-col gap-4" style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
-                    <div class="flex items-start gap-3">
-                        <div class="service-icon-square icon-ops">
-                            <i data-feather="users" style="width: 22px; height: 22px; stroke: #021019;"></i>
-                        </div>
-                        <div>
-                            <p class="text-base font-semibold text-white mb-2">Workflow Automation & Multi-Agent Systems</p>
-                            <p class="text-gray-400 text-sm mb-2">Coordinate agents to handle intake, processing, and human-in-the-loop steps. Track SLAs, retries, safety checks, and handoffs automatically.</p>
-                            <p class="text-gray-400 text-sm mb-2">Built-in observability and controls ensure every run stays compliant and on time.</p>
-                            <div class="flex flex-wrap gap-2 text-xs text-gray-300">
-                                <span class="feature-tag">Decision logic</span>
-                                <span class="feature-tag">Orchestration</span>
-                                <span class="feature-tag">Human handoffs</span>
+                <div class="space-y-6 max-w-4xl mx-auto">
+                    <div class="neon-panel flex flex-col gap-4"
+                        style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
+                        <div class="flex items-start gap-3">
+                            <div class="service-icon-square icon-ops">
+                                <i data-feather="users" style="width: 22px; height: 22px; stroke: #021019;"></i>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold text-white mb-2">Workflow Automation & Multi-Agent
+                                    Systems</p>
+                                <p class="text-gray-400 text-sm mb-2">Coordinate agents to handle intake, processing,
+                                    and human-in-the-loop steps. Track SLAs, retries, safety checks, and handoffs
+                                    automatically.</p>
+                                <p class="text-gray-400 text-sm mb-2">Built-in observability and controls ensure every
+                                    run stays compliant and on time.</p>
+                                <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                                    <span class="feature-tag">Decision logic</span>
+                                    <span class="feature-tag">Orchestration</span>
+                                    <span class="feature-tag">Human handoffs</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="neon-panel flex flex-col gap-4" style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
-                    <div class="flex items-start gap-3">
-                        <div class="service-icon-square icon-contact">
-                            <i data-feather="message-square" style="width: 22px; height: 22px; stroke: #021019;"></i>
-                        </div>
-                        <div>
-                            <p class="text-base font-semibold text-white mb-2">Conversational AI & Virtual Assistants</p>
-                            <p class="text-gray-400 text-sm mb-2">Channel-ready agents that understand intent, route tasks, and stay on-brand. Guardrails, escalations, and analytics are built in.</p>
-                            <p class="text-gray-400 text-sm mb-2">Integrates with CRM/Helpdesk so teams see context, transcripts, and next best actions.</p>
-                            <div class="flex flex-wrap gap-2 text-xs text-gray-300">
-                                <span class="feature-tag">Intent detection</span>
-                                <span class="feature-tag">CRM/Helpdesk</span>
-                                <span class="feature-tag">24/7 coverage</span>
+                    <div class="neon-panel flex flex-col gap-4"
+                        style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
+                        <div class="flex items-start gap-3">
+                            <div class="service-icon-square icon-contact">
+                                <i data-feather="message-square"
+                                    style="width: 22px; height: 22px; stroke: #021019;"></i>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold text-white mb-2">Conversational AI & Virtual
+                                    Assistants</p>
+                                <p class="text-gray-400 text-sm mb-2">Channel-ready agents that understand intent, route
+                                    tasks, and stay on-brand. Guardrails, escalations, and analytics are built in.</p>
+                                <p class="text-gray-400 text-sm mb-2">Integrates with CRM/Helpdesk so teams see context,
+                                    transcripts, and next best actions.</p>
+                                <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                                    <span class="feature-tag">Intent detection</span>
+                                    <span class="feature-tag">CRM/Helpdesk</span>
+                                    <span class="feature-tag">24/7 coverage</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="neon-panel flex flex-col gap-4" style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
-                    <div class="flex items-start gap-3">
-                        <div class="service-icon-square icon-llm">
-                            <i data-feather="sliders" style="width: 22px; height: 22px; stroke: #021019;"></i>
-                        </div>
-                        <div>
-                            <p class="text-base font-semibold text-white mb-2">Custom LLM Training & Integration</p>
-                            <p class="text-gray-400 text-sm mb-2">Fine-tune or adapt models to your voice, workflows, and compliance needs. Ship with evaluations, monitoring, and rollback plans.</p>
-                            <p class="text-gray-400 text-sm mb-2">Supports instruction-tuning, guardrail policies, and safe deployment patterns.</p>
-                            <div class="flex flex-wrap gap-2 text-xs text-gray-300">
-                                <span class="feature-tag">Fine-tuning</span>
-                                <span class="feature-tag">Multi-modal</span>
-                                <span class="feature-tag">Compliance-safe</span>
+                    <div class="neon-panel flex flex-col gap-4"
+                        style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
+                        <div class="flex items-start gap-3">
+                            <div class="service-icon-square icon-llm">
+                                <i data-feather="sliders" style="width: 22px; height: 22px; stroke: #021019;"></i>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold text-white mb-2">Custom LLM Training & Integration</p>
+                                <p class="text-gray-400 text-sm mb-2">Fine-tune or adapt models to your voice,
+                                    workflows, and compliance needs. Ship with evaluations, monitoring, and rollback
+                                    plans.</p>
+                                <p class="text-gray-400 text-sm mb-2">Supports instruction-tuning, guardrail policies,
+                                    and safe deployment patterns.</p>
+                                <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                                    <span class="feature-tag">Fine-tuning</span>
+                                    <span class="feature-tag">Multi-modal</span>
+                                    <span class="feature-tag">Compliance-safe</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="neon-panel flex flex-col gap-4" style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
-                    <div class="flex items-start gap-3">
-                        <div class="service-icon-square icon-rag">
-                            <i data-feather="book-open" style="width: 22px; height: 22px; stroke: #021019;"></i>
-                        </div>
-                        <div>
-                            <p class="text-base font-semibold text-white mb-2">Knowledge Intelligence (RAG Systems)</p>
-                            <p class="text-gray-400 text-sm mb-2">Make internal content searchable with source-aware, real-time retrieval. Keep answers cited, policy-safe, and always up to date.</p>
-                            <p class="text-gray-400 text-sm mb-2">Great for manuals, SOPs, contracts, research, and compliance-heavy content.</p>
-                            <div class="flex flex-wrap gap-2 text-xs text-gray-300">
-                                <span class="feature-tag">Smart search</span>
-                                <span class="feature-tag">Live indexing</span>
-                                <span class="feature-tag">Cited answers</span>
+                    <div class="neon-panel flex flex-col gap-4"
+                        style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
+                        <div class="flex items-start gap-3">
+                            <div class="service-icon-square icon-rag">
+                                <i data-feather="book-open" style="width: 22px; height: 22px; stroke: #021019;"></i>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold text-white mb-2">Knowledge Intelligence (RAG Systems)
+                                </p>
+                                <p class="text-gray-400 text-sm mb-2">Make internal content searchable with
+                                    source-aware, real-time retrieval. Keep answers cited, policy-safe, and always up to
+                                    date.</p>
+                                <p class="text-gray-400 text-sm mb-2">Great for manuals, SOPs, contracts, research, and
+                                    compliance-heavy content.</p>
+                                <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                                    <span class="feature-tag">Smart search</span>
+                                    <span class="feature-tag">Live indexing</span>
+                                    <span class="feature-tag">Cited answers</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="neon-panel flex flex-col gap-4" style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
-                    <div class="flex items-start gap-3">
-                        <div class="service-icon-square icon-data">
-                            <i data-feather="database" style="width: 22px; height: 22px; stroke: #021019;"></i>
-                        </div>
-                        <div>
-                            <p class="text-base font-semibold text-white mb-2">Data Extraction & Intelligence Pipelines</p>
-                            <p class="text-gray-400 text-sm mb-2">Pull, clean, and enrich data from documents, APIs, and streams automatically. Deliver structured outputs, alerts, and audit trails.</p>
-                            <p class="text-gray-400 text-sm mb-2">Optimized for invoices, logs, reports, and multi-source enrichment with quality checks.</p>
-                            <div class="flex flex-wrap gap-2 text-xs text-gray-300">
-                                <span class="feature-tag">OCR + parsing</span>
-                                <span class="feature-tag">Normalization</span>
-                                <span class="feature-tag">Actionable alerts</span>
+                    <div class="neon-panel flex flex-col gap-4"
+                        style="border-radius: 1.25rem; padding: 2.2rem; min-height: 230px;">
+                        <div class="flex items-start gap-3">
+                            <div class="service-icon-square icon-data">
+                                <i data-feather="database" style="width: 22px; height: 22px; stroke: #021019;"></i>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold text-white mb-2">Data Extraction & Intelligence
+                                    Pipelines</p>
+                                <p class="text-gray-400 text-sm mb-2">Pull, clean, and enrich data from documents, APIs,
+                                    and streams automatically. Deliver structured outputs, alerts, and audit trails.</p>
+                                <p class="text-gray-400 text-sm mb-2">Optimized for invoices, logs, reports, and
+                                    multi-source enrichment with quality checks.</p>
+                                <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                                    <span class="feature-tag">OCR + parsing</span>
+                                    <span class="feature-tag">Normalization</span>
+                                    <span class="feature-tag">Actionable alerts</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="text-center mt-12">
-            <a href="https://calendly.com/tkrupt-llc/30min" class="strategy-cta-btn" style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
-                <span>Start Your AI Build</span>
-                <span style="font-size: 1.1rem;">↗</span>
-            </a>
-        </div>
+            <div class="text-center mt-12">
+                <a href="https://calendly.com/tkrupt-llc/30min" class="strategy-cta-btn"
+                    style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
+                    <span>Start Your AI Build</span>
+                    <span style="font-size: 1.1rem;">↗</span>
+                </a>
+            </div>
     </section>
 
     <!-- Service 2: AI Solutions Showcase -->
@@ -357,91 +426,111 @@
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-14 scroll-animate fade-in-up">
-                     <h2 class="text-4xl font-bold mt-4 mb-3" style="background: linear-gradient(120deg, #6c8bff, #1DE9B6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    <h2 class="text-4xl font-bold mt-4 mb-3"
+                        style="background: linear-gradient(120deg, #6c8bff, #1DE9B6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
                         Ready-to-Run Intelligent Systems
                     </h2>
                     <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        Sector-specific systems that pair AI, workflows, and controls to launch quickly and scale safely.
+                        Sector-specific systems that pair AI, workflows, and controls to launch quickly and scale
+                        safely.
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-1" style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
+                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-1"
+                        style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
                         <div class="flex items-center justify-between mb-3">
                             <span class="feature-tag">Operations</span>
                             <i data-feather="truck" class="w-5 h-5" style="stroke: #1DE9B6;"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Supply Chain Copilot</h3>
-                        <p class="text-gray-400 text-sm mb-4">Demand sensing, replenishment recommendations, and exception triage with alerts your teams can act on.</p>
+                        <p class="text-gray-400 text-sm mb-4">Demand sensing, replenishment recommendations, and
+                            exception triage with alerts your teams can act on.</p>
                         <a href="#" class="neon-link">Explore Project →</a>
                     </div>
-                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-2" style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
+                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-2"
+                        style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
                         <div class="flex items-center justify-between mb-3">
                             <span class="feature-tag">Contact Center</span>
                             <i data-feather="headphones" class="w-5 h-5" style="stroke: #1DE9B6;"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">AI Support Desk</h3>
-                        <p class="text-gray-400 text-sm mb-4">Omnichannel agents with intent routing, quality checks, sentiment cues, and human handoffs.</p>
+                        <p class="text-gray-400 text-sm mb-4">Omnichannel agents with intent routing, quality checks,
+                            sentiment cues, and human handoffs.</p>
                         <a href="#" class="neon-link">Explore Project →</a>
                     </div>
-                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-3" style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
+                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-3"
+                        style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
                         <div class="flex items-center justify-between mb-3">
                             <span class="feature-tag">Healthcare</span>
                             <i data-feather="activity" class="w-5 h-5" style="stroke: #1DE9B6;"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Clinical Assistant</h3>
-                        <p class="text-gray-400 text-sm mb-4">Evidence-grounded answers with source citations, care plan suggestions, and escalation cues.</p>
+                        <p class="text-gray-400 text-sm mb-4">Evidence-grounded answers with source citations, care plan
+                            suggestions, and escalation cues.</p>
                         <a href="#" class="neon-link">Explore Project →</a>
                     </div>
-                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-4" style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
+                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-4"
+                        style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
                         <div class="flex items-center justify-between mb-3">
                             <span class="feature-tag">Real Estate</span>
                             <i data-feather="home" class="w-5 h-5" style="stroke: #1DE9B6;"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Real Estate CRM</h3>
-                        <p class="text-gray-400 text-sm mb-4">Lead scoring, guided outreach, and showing automation for high-velocity teams.</p>
+                        <p class="text-gray-400 text-sm mb-4">Lead scoring, guided outreach, and showing automation for
+                            high-velocity teams.</p>
                         <a href="#" class="neon-link">Explore Project →</a>
                     </div>
-                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-5" style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
+                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-5"
+                        style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
                         <div class="flex items-center justify-between mb-3">
                             <span class="feature-tag">Legal</span>
                             <i data-feather="file-text" class="w-5 h-5" style="stroke: #1DE9B6;"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Legal Draft Generator</h3>
-                        <p class="text-gray-400 text-sm mb-4">Automated drafting with clause governance, precedent lookup, and review checklists.</p>
+                        <p class="text-gray-400 text-sm mb-4">Automated drafting with clause governance, precedent
+                            lookup, and review checklists.</p>
                         <a href="#" class="neon-link">Explore Project →</a>
                     </div>
-                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-6" style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
+                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-6"
+                        style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
                         <div class="flex items-center justify-between mb-3">
                             <span class="feature-tag">B2B SaaS</span>
                             <i data-feather="edit-3" class="w-5 h-5" style="stroke: #1DE9B6;"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">RFP Automation</h3>
-                        <p class="text-gray-400 text-sm mb-4">Proposal drafting with template awareness, clause libraries, and approval workflows.</p>
+                        <p class="text-gray-400 text-sm mb-4">Proposal drafting with template awareness, clause
+                            libraries, and approval workflows.</p>
                         <a href="#" class="neon-link">Explore Project →</a>
                     </div>
-                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-1" style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
+                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-1"
+                        style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
                         <div class="flex items-center justify-between mb-3">
                             <span class="feature-tag">Energy</span>
                             <i data-feather="zap" class="w-5 h-5" style="stroke: #1DE9B6;"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Renewable Analytics</h3>
-                        <p class="text-gray-400 text-sm mb-4">Asset health monitoring, audit-ready logs, and savings triggers for renewable ops.</p>
+                        <p class="text-gray-400 text-sm mb-4">Asset health monitoring, audit-ready logs, and savings
+                            triggers for renewable ops.</p>
                         <a href="#" class="neon-link">Explore Project →</a>
                     </div>
-                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-2" style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
+                    <div class="neon-panel service-card-vertical scroll-animate fade-in-up stagger-2"
+                        style="padding: 2.2rem; border-radius: 1.5rem; min-height: 260px;">
                         <div class="flex items-center justify-between mb-3">
-                            <span class="tech-tag" style="background: rgba(4, 215, 194, 0.18); color: #1DE9B6;">Healthcare</span>
+                            <span class="tech-tag"
+                                style="background: rgba(4, 215, 194, 0.18); color: #1DE9B6;">Healthcare</span>
                             <i data-feather="heart" class="w-5 h-5" style="stroke: #1DE9B6;"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">AI Mental Health Platform</h3>
-                        <p class="text-gray-400 text-sm mb-4">Guided triage, empathetic routing, and secure documentation for virtual care teams.</p>
+                        <p class="text-gray-400 text-sm mb-4">Guided triage, empathetic routing, and secure
+                            documentation for virtual care teams.</p>
                         <a href="#" class="neon-link">Explore Project →</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="text-center mt-12">
-            <a href="https://calendly.com/tkrupt-llc/30min" class="strategy-cta-btn" style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
+            <a href="https://calendly.com/tkrupt-llc/30min" class="strategy-cta-btn"
+                style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
                 <span>Build Your Solution</span>
                 <span style="font-size: 1.1rem;">↗</span>
             </a>
@@ -456,29 +545,37 @@
                     <h2 class="section-heading">Why Choose Us</h2>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="neon-panel text-center scroll-animate fade-in-up stagger-1" style="padding: 2rem; border-radius: 1.5rem;">
-                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: rgba(4, 215, 194, 0.2); border: 2px solid rgba(4, 215, 194, 0.4);">
+                    <div class="neon-panel text-center scroll-animate fade-in-up stagger-1"
+                        style="padding: 2rem; border-radius: 1.5rem;">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+                            style="background: rgba(4, 215, 194, 0.2); border: 2px solid rgba(4, 215, 194, 0.4);">
                             <i data-feather="check-circle" style="width: 32px; height: 32px; stroke: #1DE9B6;"></i>
                         </div>
                         <h3 class="font-bold text-white mb-2">End-to-End Solutions</h3>
                         <p class="text-gray-400 text-sm">From strategy to deployment, we cover every step.</p>
                     </div>
-                    <div class="neon-panel text-center scroll-animate fade-in-up stagger-2" style="padding: 2rem; border-radius: 1.5rem;">
-                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: rgba(0, 185, 255, 0.2); border: 2px solid rgba(0, 185, 255, 0.4);">
+                    <div class="neon-panel text-center scroll-animate fade-in-up stagger-2"
+                        style="padding: 2rem; border-radius: 1.5rem;">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+                            style="background: rgba(0, 185, 255, 0.2); border: 2px solid rgba(0, 185, 255, 0.4);">
                             <i data-feather="award" style="width: 32px; height: 32px; stroke: #00BFFF;"></i>
                         </div>
                         <h3 class="font-bold text-white mb-2">Proven Expertise</h3>
                         <p class="text-gray-400 text-sm">Deep knowledge in AI agents, automation, and analytics.</p>
                     </div>
-                    <div class="neon-panel text-center scroll-animate fade-in-up stagger-3" style="padding: 2rem; border-radius: 1.5rem;">
-                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: rgba(139, 85, 255, 0.2); border: 2px solid rgba(139, 85, 255, 0.4);">
+                    <div class="neon-panel text-center scroll-animate fade-in-up stagger-3"
+                        style="padding: 2rem; border-radius: 1.5rem;">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+                            style="background: rgba(139, 85, 255, 0.2); border: 2px solid rgba(139, 85, 255, 0.4);">
                             <i data-feather="trending-up" style="width: 32px; height: 32px; stroke: #8B55FF;"></i>
                         </div>
                         <h3 class="font-bold text-white mb-2">Scalable & Flexible</h3>
                         <p class="text-gray-400 text-sm">Solutions that grow with your business.</p>
                     </div>
-                    <div class="neon-panel text-center scroll-animate fade-in-up stagger-4" style="padding: 2rem; border-radius: 1.5rem;">
-                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: rgba(116, 38, 239, 0.2); border: 2px solid rgba(116, 38, 239, 0.4);">
+                    <div class="neon-panel text-center scroll-animate fade-in-up stagger-4"
+                        style="padding: 2rem; border-radius: 1.5rem;">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+                            style="background: rgba(116, 38, 239, 0.2); border: 2px solid rgba(116, 38, 239, 0.4);">
                             <i data-feather="bar-chart" style="width: 32px; height: 32px; stroke: #7426EF;"></i>
                         </div>
                         <h3 class="font-bold text-white mb-2">Data-Driven Results</h3>
@@ -494,10 +591,13 @@
         <div class="container mx-auto px-4 text-center">
             <h2 class="section-heading mb-6 scroll-animate fade-in-up">Ready to Transform Your Business with AI?</h2>
             <p class="section-subtitle mb-8 max-w-3xl mx-auto scroll-animate fade-in">
-                Whether you need custom AI development or ready-to-deploy solutions, we'll help you implement AI that delivers real results.
+                Whether you need custom AI development or ready-to-deploy solutions, we'll help you implement AI that
+                delivers real results.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 scroll-animate scale-in">
-                <a href="https://calendly.com/tkrupt-llc/30min" class="hero-cta-primary flex items-center justify-center gap-2 text-lg" style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
+                <a href="https://calendly.com/tkrupt-llc/30min"
+                    class="hero-cta-primary flex items-center justify-center gap-2 text-lg"
+                    style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
                     <i data-feather="calendar" class="w-5 h-5"></i>
                     <span>Book a Strategy Call</span>
                 </a>
@@ -508,13 +608,15 @@
             </div>
         </div>
     </section>
-    
+
     <custom-footer></custom-footer>
     <script src="components/header.js"></script>
     <script src="components/footer.js"></script>
     <script src="script/particle-grid.js"></script>
     <script src="script.js"></script>
-    <script>feather.replace();</script>
+    <script>
+        feather.replace();
+    </script>
 </body>
-</html>
 
+</html>

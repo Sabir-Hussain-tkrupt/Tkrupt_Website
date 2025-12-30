@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,46 +23,66 @@
                     }
                 }
             }
-        } 
-    </script> 
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body class="bg-black text-gray-100 font-sans">
     <custom-header></custom-header>
-    
+
     <!-- Hero Section -->
-    <section class="relative h-screen overflow-hidden flex items-center justify-center bg-[#01070f] text-center" id="hero">
+    <section class="relative h-screen overflow-hidden flex items-center justify-center bg-[#01070f] text-center"
+        id="hero">
         <particle-grid-background></particle-grid-background>
         <!-- Gradient overlays -->
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#020a0f]/75 to-[#000000] pointer-events-none"></div>
-        <div class="absolute top-24 left-8 w-64 h-64 bg-[#0ad4bf33] rounded-full blur-3xl opacity-70 animate-pulse"></div>
-        <div class="absolute bottom-20 right-12 w-96 h-96 bg-[#0098ff29] rounded-full blur-3xl opacity-70 animate-pulse" style="animation-delay:1.8s;"></div>
-        <div class="absolute top-1/3 left-1/2 w-72 h-72 bg-[#7c3aed33] rounded-full blur-3xl opacity-60 animate-pulse" style="animation-delay:3s;"></div>
-        
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent via-[#020a0f]/75 to-[#000000] pointer-events-none">
+        </div>
+        <div class="absolute top-24 left-8 w-64 h-64 bg-[#0ad4bf33] rounded-full blur-3xl opacity-70 animate-pulse">
+        </div>
+        <div class="absolute bottom-20 right-12 w-96 h-96 bg-[#0098ff29] rounded-full blur-3xl opacity-70 animate-pulse"
+            style="animation-delay:1.8s;"></div>
+        <div class="absolute top-1/3 left-1/2 w-72 h-72 bg-[#7c3aed33] rounded-full blur-3xl opacity-60 animate-pulse"
+            style="animation-delay:3s;"></div>
+
         <div class="container mx-auto h-full flex items-center justify-center relative z-10 px-4">
             <div class="max-w-4xl mx-auto">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#05e3cf]/30 backdrop-blur-md text-sm font-medium text-[#05e3cf] mb-8">
+                    <i data-feather="briefcase" class="w-4 h-4 text-[#f5c84c]"></i>
+                    <span>Our Work</span>
+                </div>
+
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight mx-auto">
-                    <span class="bg-gradient-to-br from-[#008080] to-[#1DE9B6] bg-clip-text text-transparent">Results</span>
-                    <span class="bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent"> That Make </span>
+                    <span
+                        class="bg-gradient-to-br from-[#008080] to-[#1DE9B6] bg-clip-text text-transparent">Results</span>
+                    <span class="bg-gradient-to-br from-[#00BFFF] to-[#40E0D0] bg-clip-text text-transparent"> That Make
+                    </span>
                     <br>
-                    <span class="bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent">an Impact.</span>
+                    <span class="bg-gradient-to-br from-[#008080] to-[#7426EF] bg-clip-text text-transparent">an
+                        Impact.</span>
                 </h1>
                 <p class="text-base sm:text-lg md:text-xl mb-10 text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
-                    Explore real-world AI implementations, automation workflows, and intelligent systems delivered for clients across multiple industries.
+                    Explore real-world AI implementations, automation workflows, and intelligent systems delivered for
+                    clients across multiple industries.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                    <a href="https://calendly.com/tkrupt-llc/30min" class="hero-cta-primary flex items-center justify-center gap-2 text-lg" style="background: linear-gradient(120deg, #05e3cf, #00a6ff);">
+                    <a href="https://calendly.com/tkrupt-llc/30min"
+                        class="hero-cta-primary flex items-center justify-center gap-2 text-lg"
+                        style="background: linear-gradient(120deg, #05e3cf, #00a6ff);">
                         <i data-feather="calendar" class="w-5 h-5"></i>
                         <span>Book a Strategy Call</span>
                     </a>
-                    <a href="#success-stories" class="hero-cta-secondary flex items-center justify-center gap-2 text-lg">
+                    <a href="#success-stories"
+                        class="hero-cta-secondary flex items-center justify-center gap-2 text-lg">
                         <i data-feather="grid" class="w-5 h-5"></i>
                         <span>View Projects</span>
                     </a>
                 </div>
             </div>
-            
+
             <div class="absolute bottom-16 w-full flex justify-center animate-bounce">
                 <a href="#success-stories" class="inline-flex items-center justify-center">
                     <i data-feather="chevron-down" class="text-[#00a6ff] w-10 h-10"></i>
@@ -82,191 +103,252 @@
 
             <!-- Projects Grid -->
             <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <!-- Project 1 -->
-                    <div class="neon-panel project-card neon-hover-effect scroll-animate fade-in-up stagger-1" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/Ads Analysis Dashboard.png" alt="AI-Powered Ads Analysis Dashboard" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    </div>
-                        <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI-Powered Ads Analysis Dashboard</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Intelligent analytics dashboard for Amazon Ads Service Providers that transforms advertising data into actionable insights.</p>
-                    <div class="project-metric mb-4">
-                        <span style="color: #1DE9B6; font-weight: 600;">40% improvement in ad spend efficiency</span>
-                    </div>
-                    <div class="project-features mb-4">
-                        <span class="feature-tag">Real-Time Analytics</span>
-                        <span class="feature-tag">Campaign Optimization</span>
-                        <span class="feature-tag">Automated Insights</span>
-                    </div>
-                    <div class="project-tech mb-4">
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Power BI</span>
-                    </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
-                        Learn more →
-                    </a>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Project 1 -->
+                    <div class="neon-panel project-card neon-hover-effect scroll-animate fade-in-up stagger-1"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/Ads Analysis Dashboard.png" alt="AI-Powered Ads Analysis Dashboard"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
-                </div>
-
-                <!-- Project 2 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-2" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/CRM Solution.png" alt="CRM Solution for Client & Staff Management" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">CRM Solution for Client & Staff Management</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Comprehensive CRM platform designed to streamline client relationships and internal team operations with intelligent automation.</p>
-                    <div class="project-metric mb-4">
-                        <span style="color: #1DE9B6; font-weight: 600;">45% reduction in administrative overhead</span>
-                    </div>
-                    <div class="project-features mb-4">
-                        <span class="feature-tag">Contact Management</span>
-                        <span class="feature-tag">Workflow Automation</span>
-                        <span class="feature-tag">Performance Analytics</span>
-                    </div>
-                    <div class="project-tech mb-4">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Docker</span>
-                    </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
-                        Learn more →
-                    </a>
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI-Powered Ads Analysis
+                                Dashboard</h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Intelligent
+                                analytics dashboard for Amazon Ads Service Providers that transforms advertising data
+                                into actionable insights.</p>
+                            <div class="project-metric mb-4">
+                                <span style="color: #1DE9B6; font-weight: 600;">40% improvement in ad spend
+                                    efficiency</span>
+                            </div>
+                            <div class="project-features mb-4">
+                                <span class="feature-tag">Real-Time Analytics</span>
+                                <span class="feature-tag">Campaign Optimization</span>
+                                <span class="feature-tag">Automated Insights</span>
+                            </div>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Power BI</span>
+                            </div>
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                                Learn more →
+                            </a>
                         </div>
-                </div>
+                    </div>
 
-                <!-- Project 3 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-3" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/AI Phone Call Agent.png" alt="AI Phone Call Agent with Voice Cloning & Automation" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    </div>
-                        <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI Phone Call Agent with Voice Cloning & Automation</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Bilingual AI phone assistant featuring cloned team member voices for authentic customer interactions with 24/7 availability.</p>
-                    <div class="project-metric mb-4">
-                        <span style="color: #1DE9B6; font-weight: 600;">24/7 automated customer support coverage</span>
-                    </div>
-                    <div class="project-features mb-4">
-                        <span class="feature-tag">Voice Cloning</span>
-                        <span class="feature-tag">Bilingual Support</span>
-                        <span class="feature-tag">CRM Integration</span>
-                    </div>
-                    <div class="project-tech mb-4">
-                        <span class="tech-tag">Vapi</span>
-                        <span class="tech-tag">ElevenLabs</span>
-                        <span class="tech-tag">N8N</span>
-                        <span class="tech-tag">GoHighLevel</span>
-                        <span class="tech-tag">Selenium</span>
-                    </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
-                        Learn more →
-                    </a>
+                    <!-- Project 2 -->
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-2"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/CRM Solution.png" alt="CRM Solution for Client & Staff Management"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
-                </div>
-
-                <!-- Project 4 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-4" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/Dental X-ray.png" alt="Dental X-Ray Analysis Platform" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Dental X-Ray Analysis Platform</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">AI-powered diagnostic tool that automates dental radiograph analysis using advanced computer vision for instant cavity detection.</p>
-                    <div class="project-metric mb-4">
-                        <span style="color: #1DE9B6; font-weight: 600;">85% accuracy in cavity detection</span>
-                    </div>
-                    <div class="project-features mb-4">
-                        <span class="feature-tag">Computer Vision</span>
-                        <span class="feature-tag">Instant Detection</span>
-                        <span class="feature-tag">Cloud-Based</span>
-                    </div>
-                    <div class="project-tech mb-4">
-                        <span class="tech-tag">YOLO</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">FastAPI</span>
-                    </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
-                        Learn more →
-                    </a>
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">CRM Solution for Client & Staff
+                                Management</h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Comprehensive
+                                CRM platform designed to streamline client relationships and internal team operations
+                                with intelligent automation.</p>
+                            <div class="project-metric mb-4">
+                                <span style="color: #1DE9B6; font-weight: 600;">45% reduction in administrative
+                                    overhead</span>
+                            </div>
+                            <div class="project-features mb-4">
+                                <span class="feature-tag">Contact Management</span>
+                                <span class="feature-tag">Workflow Automation</span>
+                                <span class="feature-tag">Performance Analytics</span>
+                            </div>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                                Learn more →
+                            </a>
                         </div>
-                </div>
+                    </div>
 
-                <!-- Project 5 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-5" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/Demand Forecasting.png" alt="Demand Forecasting System for Supply Chain" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    </div>
-                        <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Demand Forecasting System for Supply Chain</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">AI-powered demand forecasting solution that optimizes inventory management and minimizes waste through predictive analytics.</p>
-                    <div class="project-metric mb-4">
-                        <span style="color: #1DE9B6; font-weight: 600;">35% reduction in overstock inventory</span>
-                    </div>
-                    <div class="project-features mb-4">
-                        <span class="feature-tag">Predictive Analytics</span>
-                        <span class="feature-tag">Inventory Optimization</span>
-                        <span class="feature-tag">Real-Time Predictions</span>
-                    </div>
-                    <div class="project-tech mb-4">
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">Time Series Analysis</span>
-                        <span class="tech-tag">Pandas</span>
-                    </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
-                        Learn more →
-                    </a>
+                    <!-- Project 3 -->
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-3"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/AI Phone Call Agent.png"
+                                alt="AI Phone Call Agent with Voice Cloning & Automation" class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
-                </div>
-
-                <!-- Project 6 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-6" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/Multi-lingual.png" alt="Multi-Lingual E-Commerce Chatbot" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Multi-Lingual E-Commerce Chatbot</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Intelligent conversational AI assistant that provides seamless customer support across multiple languages and platforms in real-time.</p>
-                    <div class="project-metric mb-4">
-                        <span style="color: #1DE9B6; font-weight: 600;">65% reduction in customer service tickets</span>
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI Phone Call Agent with Voice
+                                Cloning & Automation</h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Bilingual AI
+                                phone assistant featuring cloned team member voices for authentic customer interactions
+                                with 24/7 availability.</p>
+                            <div class="project-metric mb-4">
+                                <span style="color: #1DE9B6; font-weight: 600;">24/7 automated customer support
+                                    coverage</span>
+                            </div>
+                            <div class="project-features mb-4">
+                                <span class="feature-tag">Voice Cloning</span>
+                                <span class="feature-tag">Bilingual Support</span>
+                                <span class="feature-tag">CRM Integration</span>
+                            </div>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">Vapi</span>
+                                <span class="tech-tag">ElevenLabs</span>
+                                <span class="tech-tag">N8N</span>
+                                <span class="tech-tag">GoHighLevel</span>
+                                <span class="tech-tag">Selenium</span>
+                            </div>
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                                Learn more →
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-features mb-4">
-                        <span class="feature-tag">Multi-Language</span>
-                        <span class="feature-tag">24/7 Support</span>
-                        <span class="feature-tag">Order Tracking</span>
+
+                    <!-- Project 4 -->
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-4"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/Dental X-ray.png" alt="Dental X-Ray Analysis Platform"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        </div>
+                        <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Dental X-Ray Analysis Platform
+                            </h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">AI-powered
+                                diagnostic tool that automates dental radiograph analysis using advanced computer vision
+                                for instant cavity detection.</p>
+                            <div class="project-metric mb-4">
+                                <span style="color: #1DE9B6; font-weight: 600;">85% accuracy in cavity detection</span>
+                            </div>
+                            <div class="project-features mb-4">
+                                <span class="feature-tag">Computer Vision</span>
+                                <span class="feature-tag">Instant Detection</span>
+                                <span class="feature-tag">Cloud-Based</span>
+                            </div>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">YOLO</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">FastAPI</span>
+                            </div>
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                                Learn more →
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-tech mb-4">
-                        <span class="tech-tag">Natural Language Processing</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Dialogflow</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">MongoDB</span>
+
+                    <!-- Project 5 -->
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-5"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/Demand Forecasting.png" alt="Demand Forecasting System for Supply Chain"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        </div>
+                        <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Demand Forecasting System for
+                                Supply Chain</h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">AI-powered
+                                demand forecasting solution that optimizes inventory management and minimizes waste
+                                through predictive analytics.</p>
+                            <div class="project-metric mb-4">
+                                <span style="color: #1DE9B6; font-weight: 600;">35% reduction in overstock
+                                    inventory</span>
+                            </div>
+                            <div class="project-features mb-4">
+                                <span class="feature-tag">Predictive Analytics</span>
+                                <span class="feature-tag">Inventory Optimization</span>
+                                <span class="feature-tag">Real-Time Predictions</span>
+                            </div>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Time Series Analysis</span>
+                                <span class="tech-tag">Pandas</span>
+                            </div>
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                                Learn more →
+                            </a>
+                        </div>
                     </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+
+                    <!-- Project 6 -->
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-6"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/Multi-lingual.png" alt="Multi-Lingual E-Commerce Chatbot"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        </div>
+                        <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Multi-Lingual E-Commerce Chatbot
+                            </h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Intelligent
+                                conversational AI assistant that provides seamless customer support across multiple
+                                languages and platforms in real-time.</p>
+                            <div class="project-metric mb-4">
+                                <span style="color: #1DE9B6; font-weight: 600;">65% reduction in customer service
+                                    tickets</span>
+                            </div>
+                            <div class="project-features mb-4">
+                                <span class="feature-tag">Multi-Language</span>
+                                <span class="feature-tag">24/7 Support</span>
+                                <span class="feature-tag">Order Tracking</span>
+                            </div>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">Natural Language Processing</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Dialogflow</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
                                 Learn more →
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 7 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-7" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/Schedulling_Slack.png" alt="AI Scheduling Agent for Slack" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-7"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/Schedulling_Slack.png" alt="AI Scheduling Agent for Slack"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI Scheduling Agent for Slack</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Smart automation tool that schedules meetings, manages availability, and sends reminders directly inside Slack using natural language commands.</p>
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI Scheduling Agent for Slack
+                            </h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Smart automation
+                                tool that schedules meetings, manages availability, and sends reminders directly inside
+                                Slack using natural language commands.</p>
                             <div class="project-metric mb-4">
-                                <span style="color: #1DE9B6; font-weight: 600;">90% reduction in manual scheduling time</span>
+                                <span style="color: #1DE9B6; font-weight: 600;">90% reduction in manual scheduling
+                                    time</span>
                             </div>
                             <div class="project-features mb-4">
                                 <span class="feature-tag">SaaS</span>
@@ -282,22 +364,29 @@
                                 <span class="tech-tag">Webhooks</span>
                                 <span class="tech-tag">NLP</span>
                             </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
                                 Learn more →
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 8 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-8" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/GPS Navigator.png" alt="Smart Voice GPS Navigator" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-8"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/GPS Navigator.png" alt="Smart Voice GPS Navigator" class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
                             <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Smart Voice GPS Navigator</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Hands-free navigation assistant that listens to voice commands and delivers live route guidance, nearby place suggestions, and real-time traffic info using Google Maps APIs.</p>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Hands-free
+                                navigation assistant that listens to voice commands and delivers live route guidance,
+                                nearby place suggestions, and real-time traffic info using Google Maps APIs.</p>
                             <div class="project-metric mb-4">
-                                <span style="color: #1DE9B6; font-weight: 600;">Instant voice routing on any device</span>
+                                <span style="color: #1DE9B6; font-weight: 600;">Instant voice routing on any
+                                    device</span>
                             </div>
                             <div class="project-features mb-4">
                                 <span class="feature-tag">Transportation</span>
@@ -316,20 +405,28 @@
                                 <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">Geolocation API</span>
                             </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
                                 Learn more →
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 9 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-9" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/Sales Cold Outreach System.png" alt="AI Sales Cold Outreach System" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-9"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/Sales Cold Outreach System.png" alt="AI Sales Cold Outreach System"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI Sales Cold Outreach System</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Automated prospecting and outreach engine that finds leads, enriches data, and sends personalized cold messages at scale with zero manual work.</p>
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI Sales Cold Outreach System
+                            </h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Automated
+                                prospecting and outreach engine that finds leads, enriches data, and sends personalized
+                                cold messages at scale with zero manual work.</p>
                             <div class="project-metric mb-4">
                                 <span style="color: #1DE9B6; font-weight: 600;">3× reply rate improvement</span>
                             </div>
@@ -347,20 +444,28 @@
                                 <span class="tech-tag">AI Copywriting</span>
                                 <span class="tech-tag">Lead Filters</span>
                             </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
                                 Learn more →
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 10 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-10" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/News Summarizer.jpeg" alt="AI News Summarizer & Topic Tracker" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-10"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/News Summarizer.jpeg" alt="AI News Summarizer & Topic Tracker"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI News Summarizer & Topic Tracker</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Smart news dashboard that fetches live articles, generates concise summaries, and tracks trending topics based on user interests.</p>
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI News Summarizer & Topic
+                                Tracker</h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Smart news
+                                dashboard that fetches live articles, generates concise summaries, and tracks trending
+                                topics based on user interests.</p>
                             <div class="project-metric mb-4">
                                 <span style="color: #1DE9B6; font-weight: 600;">Real-time news insight in seconds</span>
                             </div>
@@ -380,22 +485,31 @@
                                 <span class="tech-tag">Docker</span>
                                 <span class="tech-tag">Render</span>
                             </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
                                 Learn more →
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 11 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-11" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/Blog Automation Shopify.jpeg" alt="AI Blog Automation System for Shopify" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-11"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/Blog Automation Shopify.jpeg" alt="AI Blog Automation System for Shopify"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI Blog Automation System for Shopify</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">RAG-powered content engine that publishes bilingual (Dutch + English) 1,200–1,500 word blog posts daily with SEO optimization, fact-checked retrieval, and direct Shopify publishing.</p>
+                            <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">AI Blog Automation System for
+                                Shopify</h3>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">RAG-powered
+                                content engine that publishes bilingual (Dutch + English) 1,200–1,500 word blog posts
+                                daily with SEO optimization, fact-checked retrieval, and direct Shopify publishing.</p>
                             <div class="project-metric mb-4">
-                                <span style="color: #1DE9B6; font-weight: 600;">Hands-off blog production at scale</span>
+                                <span style="color: #1DE9B6; font-weight: 600;">Hands-off blog production at
+                                    scale</span>
                             </div>
                             <div class="project-features mb-4">
                                 <span class="feature-tag">E-Commerce</span>
@@ -414,22 +528,30 @@
                                 <span class="tech-tag">DALL-E</span>
                                 <span class="tech-tag">RAG pipeline</span>
                             </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
                                 Learn more →
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 12 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-12" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/Autonomous Agent Hub.jpeg" alt="Autonomous AI Agent Hub" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-12"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/Autonomous Agent Hub.jpeg" alt="Autonomous AI Agent Hub"
+                                class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
                             <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Autonomous AI Agent Hub</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Smart AI system that runs independent agents with memory, context awareness, and sleep scheduling, supporting real-time voice and text interactions via WebRTC.</p>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Smart AI system
+                                that runs independent agents with memory, context awareness, and sleep scheduling,
+                                supporting real-time voice and text interactions via WebRTC.</p>
                             <div class="project-metric mb-4">
-                                <span style="color: #1DE9B6; font-weight: 600;">Up to 90% reduction in repetitive task handling</span>
+                                <span style="color: #1DE9B6; font-weight: 600;">Up to 90% reduction in repetitive task
+                                    handling</span>
                             </div>
                             <div class="project-features mb-4">
                                 <span class="feature-tag">AI Assistants</span>
@@ -449,22 +571,29 @@
                                 <span class="tech-tag">JSON Memory Store</span>
                                 <span class="tech-tag">Cron</span>
                             </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
                                 Learn more →
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 13 -->
-                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-13" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                        <div class="project-image-wrapper" style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
-                            <img src="./assets/Savvy GPT.jpeg" alt="Savvy GPT" class="project-image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="neon-panel project-card scroll-animate fade-in-up stagger-13"
+                        style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="project-image-wrapper"
+                            style="width: 100%; height: 200px; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; border: 1px solid rgba(56, 189, 248, 0.2); flex-shrink: 0;">
+                            <img src="./assets/Savvy GPT.jpeg" alt="Savvy GPT" class="project-image"
+                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
                         </div>
                         <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
                             <h3 class="text-2xl font-bold mb-3" style="color: #f8fafc;">Savvy GPT</h3>
-                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Enabled faster product alignment and streamlined chatbot deployment through requirement analysis, workflow documentation, and stakeholder collaboration.</p>
+                            <p class="mb-4" style="color: rgba(226, 232, 240, 0.85); line-height: 1.6;">Enabled faster
+                                product alignment and streamlined chatbot deployment through requirement analysis,
+                                workflow documentation, and stakeholder collaboration.</p>
                             <div class="project-metric mb-4">
-                                <span style="color: #1DE9B6; font-weight: 600;">Accelerated AI product delivery and deployment planning by 70–80%</span>
+                                <span style="color: #1DE9B6; font-weight: 600;">Accelerated AI product delivery and
+                                    deployment planning by 70–80%</span>
                             </div>
                             <div class="project-features mb-4">
                                 <span class="feature-tag">Enterprise Chatbots</span>
@@ -477,9 +606,10 @@
                                 <span class="tech-tag">Workflow Documentation</span>
                                 <span class="tech-tag">Stakeholder Collaboration</span>
                             </div>
-                            <a href="#" class="neon-link" style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
-                        Learn more →
-                    </a>
+                            <a href="#" class="neon-link"
+                                style="display: inline-flex; gap: 0.5rem; color: #04d7c2; text-decoration: none; font-weight: 500; align-self: flex-start;">
+                                Learn more →
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -487,7 +617,9 @@
 
             <!-- Start Your Project Button -->
             <div class="text-center scroll-animate scale-in">
-                <a href="https://calendly.com/tkrupt-llc/30min" class="hero-cta-primary inline-flex items-center justify-center gap-2 text-lg" style="background: linear-gradient(120deg, #05e3cf, #00a6ff);">
+                <a href="https://calendly.com/tkrupt-llc/30min"
+                    class="hero-cta-primary inline-flex items-center justify-center gap-2 text-lg"
+                    style="background: linear-gradient(120deg, #05e3cf, #00a6ff);">
                     <i data-feather="rocket" class="w-5 h-5"></i>
                     <span>Start Your Project</span>
                     <i data-feather="arrow-right" class="w-5 h-5"></i>
@@ -502,7 +634,8 @@
             <div class="text-center mb-16 scroll-animate fade-in-up">
                 <h2 class="section-heading">About Tkrupt</h2>
                 <p class="section-subtitle max-w-3xl mx-auto">
-                    (pronounced as 'tech-rupt') envisions fueling technology disruption by crafting state-of-the-art AI-powered digital solutions for Startups, SMBs and Enterprises.
+                    (pronounced as 'tech-rupt') envisions fueling technology disruption by crafting state-of-the-art
+                    AI-powered digital solutions for Startups, SMBs and Enterprises.
                 </p>
             </div>
 
@@ -534,9 +667,9 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Reviews Section -->
-<section class="thematic-section py-20">
+    <section class="thematic-section py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="section-heading">Client Reviews</h2>
@@ -561,10 +694,13 @@
         <div class="container mx-auto px-4 text-center">
             <h2 class="section-heading mb-6 scroll-animate fade-in-up">Ready to Transform Your Business with AI?</h2>
             <p class="section-subtitle mb-8 max-w-3xl mx-auto scroll-animate fade-in">
-                Whether you need custom AI development or ready-to-deploy solutions, we'll help you implement AI that delivers real results.
+                Whether you need custom AI development or ready-to-deploy solutions, we'll help you implement AI that
+                delivers real results.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 scroll-animate scale-in">
-                <a href="https://calendly.com/tkrupt-llc/30min" class="hero-cta-primary flex items-center justify-center gap-2 text-lg" style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
+                <a href="https://calendly.com/tkrupt-llc/30min"
+                    class="hero-cta-primary flex items-center justify-center gap-2 text-lg"
+                    style="background: linear-gradient(120deg, #05e3cf, #00a6ff)">
                     <i data-feather="calendar" class="w-5 h-5"></i>
                     <span>Book a Strategy Call</span>
                 </a>
@@ -575,13 +711,15 @@
             </div>
         </div>
     </section>
-    
+
     <custom-footer></custom-footer>
     <script src="components/header.js"></script>
     <script src="components/footer.js"></script>
     <script src="script/particle-grid.js"></script>
     <script src="script.js"></script>
-    <script>feather.replace();</script>
+    <script>
+        feather.replace();
+    </script>
 </body>
-</html>
 
+</html>
