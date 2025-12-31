@@ -102,6 +102,42 @@
             </div>
         </div>
     </section>
+    <script>
+        const words = ["Potential", "Growth", "Transformations"];
+        let currentIndex = 0;
+        const textElement = document.getElementById("dynamic-text");
+
+        setInterval(() => {
+            // 1. Exit Phase: Slide UP and Fade Out
+            textElement.classList.remove('translate-y-0', 'opacity-100');
+            textElement.classList.add('-translate-y-8', 'opacity-0');
+
+            // 2. Reset & Enter Phase
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % words.length;
+                textElement.innerText = words[currentIndex];
+
+                // Disable transition to teleport
+                textElement.classList.remove('transition-all', 'duration-700', 'ease-out');
+
+                // Move to bottom instantly
+                textElement.classList.remove('-translate-y-8');
+                textElement.classList.add('translate-y-8');
+
+                // Force reflow
+                void textElement.offsetWidth;
+
+                // Re-enable transition
+                textElement.classList.add('transition-all', 'duration-700', 'ease-out');
+
+                // Slide to center
+                textElement.classList.remove('translate-y-8', 'opacity-0');
+                textElement.classList.add('translate-y-0', 'opacity-100');
+
+            }, 500);
+
+        }, 2500);
+    </script>
 
     <!-- Services Section -->
     <section id="services" class="thematic-section py-20">
