@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        animation: {
+          // This creates the class "animate-scroll"
+          scroll: 'scroll 40s linear infinite',
+        },
+        keyframes: {
+          scroll: {
+            '0%': { transform: 'translateX(0)' },
+            // We move -50% because we duplicated the logo list. 
+            // When it reaches half way, it snaps back to 0, creating a perfect loop.
+            '100%': { transform: 'translateX(-50%)' },
+          }
+        }
+      }
+    }
+  }
+</script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -153,86 +173,62 @@
         </div>
 
         <div class="logo-fade-mask w-full max-w-6xl mx-auto overflow-hidden relative">
-            <div class="flex w-max animate-scroll items-center gap-12 md:gap-16">
-                
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/remax.png" class="h-8 md:h-10 w-auto object-contain" alt="Remax">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/zelevate.png" class="h-8 md:h-10 w-auto object-contain" alt="Zelevate">
-                </div>
-                <div class="flex items-center justify-center opacity-100transition-all duration-300">
-                    <img src="./assets/zippit.png" class="h-8 md:h-10 w-auto object-contain" alt="Zippit">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/scale.png" class="h-8 md:h-10 w-auto object-contain" alt="Scale">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/hired.png" class="h-8 md:h-10 w-auto object-contain" alt="Hired">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/chain.png" class="h-8 md:h-10 w-auto object-contain" alt="Chain">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/company.png" class="h-8 md:h-10 w-auto object-contain" alt="Company">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/savvy.png" class="h-8 md:h-10 w-auto object-contain" alt="Savvy">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/human.png" class="h-8 md:h-10 w-auto object-contain" alt="Human">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/pizzafredag.png" class="h-8 md:h-10 w-auto object-contain" alt="PizzaFredag">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/sidwashere.png" class="h-8 md:h-10 w-auto object-contain" alt="SidWasHere">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/customai.png" class="h-8 md:h-10 w-auto object-contain" alt="CustomAI">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/milion.png" class="h-8 md:h-10 w-auto object-contain" alt="Milion">
-                </div>
+        <div class="flex w-max animate-scroll items-center gap-12 md:gap-16">
 
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/remax.png" class="h-8 md:h-10 w-auto object-contain" alt="Remax">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/zelevate.png" class="h-8 md:h-10 w-auto object-contain" alt="Zelevate">
+                    <img src="./assets/company-logo/zelevate.png" class="h-8 md:h-10 w-auto object-contain" alt="Zelevate">
                 </div>
                 <div class="flex items-center justify-center opacity-100transition-all duration-300">
-                    <img src="./assets/zippit.png" class="h-8 md:h-10 w-auto object-contain" alt="Zippit">
+                    <img src="./assets/company-logo/zippit.png" class="h-8 md:h-10 w-auto object-contain" alt="Zippit">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/scale.png" class="h-8 md:h-10 w-auto object-contain" alt="Scale">
+                    <img src="./assets/company-logo/like-a-human.png" class="h-8 md:h-10 w-auto object-contain" alt="Human">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/hired.png" class="h-8 md:h-10 w-auto object-contain" alt="Hired">
+                    <img src="./assets/company-logo/fluye.png" class="h-8 md:h-10 w-auto object-contain" alt="Zelevate">
+                </div>
+                <div class="flex items-center justify-center opacity-100transition-all duration-300">
+                    <img src="./assets/company-logo/codestride.png" class="h-8 md:h-10 w-auto object-contain" alt="Zippit">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/chain.png" class="h-8 md:h-10 w-auto object-contain" alt="Chain">
+                    <img src="./assets/company-logo/bluonx.png" class="h-8 md:h-10 w-auto object-contain" alt="Human">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/company.png" class="h-8 md:h-10 w-auto object-contain" alt="Company">
+                    <img src="./assets/company-logo/sidwashere.png" class="h-8 md:h-10 w-auto object-contain" alt="SidWasHere">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/savvy.png" class="h-8 md:h-10 w-auto object-contain" alt="Savvy">
+                    <img src="./assets/company-logo/scale.png" class="h-8 md:h-10 w-auto object-contain" alt="Scale">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/human.png" class="h-8 md:h-10 w-auto object-contain" alt="Human">
+                    <img src="./assets/company-logo/pizza.png" class="h-8 md:h-10 w-auto object-contain" alt="PizzaFredag">
+                </div>
+                <!-- ------------------------------------------------------------------------------------------------------------->
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/company-logo/zelevate.png" class="h-8 md:h-10 w-auto object-contain" alt="Zelevate">
+                </div>
+                <div class="flex items-center justify-center opacity-100transition-all duration-300">
+                    <img src="./assets/company-logo/zippit.png" class="h-8 md:h-10 w-auto object-contain" alt="Zippit">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/pizzafredag.png" class="h-8 md:h-10 w-auto object-contain" alt="PizzaFredag">
+                    <img src="./assets/company-logo/like-a-human.png" class="h-8 md:h-10 w-auto object-contain" alt="Human">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/sidwashere.png" class="h-8 md:h-10 w-auto object-contain" alt="SidWasHere">
+                    <img src="./assets/company-logo/fluye.png" class="h-8 md:h-10 w-auto object-contain" alt="Zelevate">
+                </div>
+                <div class="flex items-center justify-center opacity-100transition-all duration-300">
+                    <img src="./assets/company-logo/codestride.png" class="h-8 md:h-10 w-auto object-contain" alt="Zippit">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/customai.png" class="h-8 md:h-10 w-auto object-contain" alt="CustomAI">
+                    <img src="./assets/company-logo/bluonx.png" class="h-8 md:h-10 w-auto object-contain" alt="Human">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/milion.png" class="h-8 md:h-10 w-auto object-contain" alt="Milion">
+                    <img src="./assets/company-logo/sidwashere.png" class="h-8 md:h-10 w-auto object-contain" alt="SidWasHere">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/company-logo/Solutions.png" class="h-8 md:h-10 w-auto object-contain" alt="Scale">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/company-logo/pizza.png" class="h-8 md:h-10 w-auto object-contain" alt="PizzaFredag">
                 </div>
             </div>
         </div>
@@ -819,79 +815,125 @@
         </div>
 
         <div class="logo-fade-mask w-full max-w-7xl mx-auto overflow-hidden relative">
+
             <div class="flex w-max animate-scroll items-center gap-12 md:gap-16">
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/mcp.png" class="h-8 md:h-10 w-auto object-contain" alt="MCP">
+                    <img src="./assets/Techstack/mcp.png" class="h-8 md:h-10 w-auto object-contain" alt="MCP">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/vapi.png" class="h-8 md:h-10 w-auto object-contain" alt="Vapi">
+                    <img src="./assets/Techstack/vapi.png" class="h-8 md:h-10 w-auto object-contain" alt="Vapi">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/n8n.png" class="h-8 md:h-10 w-auto object-contain" alt="n8n">
+                    <img src="./assets/Techstack/n8n.png" class="h-8 md:h-10 w-auto object-contain" alt="n8n">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/openai.png" class="h-8 md:h-10 w-auto object-contain" alt="OpenAI">
+                    <img src="./assets/Techstack/openai.png" class="h-8 md:h-10 w-auto object-contain" alt="OpenAI">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/langchain.png" class="h-8 md:h-10 w-auto object-contain" alt="LangChain">
+                    <img src="./assets/Techstack/langchain.png" class="h-8 md:h-10 w-auto object-contain" alt="LangChain">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/flow.png" class="h-8 md:h-10 w-auto object-contain" alt="Flowise">
+                    <img src="./assets/Techstack/flow.png" class="h-8 md:h-10 w-auto object-contain" alt="Flowise">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/Pytorch.png" class="h-8 md:h-10 w-auto object-contain" alt="PyTorch">
+                    <img src="./assets/Techstack/Pytorch.png" class="h-8 md:h-10 w-auto object-contain" alt="PyTorch">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/react.png" class="h-8 md:h-10 w-auto object-contain" alt="React">
+                    <img src="./assets/Techstack/react.png" class="h-8 md:h-10 w-auto object-contain" alt="React">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/node.png" class="h-8 md:h-10 w-auto object-contain" alt="Node.js">
+                    <img src="./assets/Techstack/node.png" class="h-8 md:h-10 w-auto object-contain" alt="Node.js">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/python.png" class="h-8 md:h-10 w-auto object-contain" alt="Python">
+                    <img src="./assets/Techstack/python.png" class="h-8 md:h-10 w-auto object-contain" alt="Python">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/aws.png" class="h-8 md:h-10 w-auto object-contain" alt="AWS">
+                    <img src="./assets/Techstack/aws.png" class="h-8 md:h-10 w-auto object-contain" alt="AWS">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/eleven.png" class="h-8 md:h-10 w-auto object-contain" alt="ElevenLabs">
+                    <img src="./assets/Techstack/eleven.png" class="h-8 md:h-10 w-auto object-contain" alt="ElevenLabs">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/fast.png" class="h-8 md:h-10 w-auto object-contain" alt="FastAPI">
+                    <img src="./assets/Techstack/fast.png" class="h-8 md:h-10 w-auto object-contain" alt="FastAPI">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/post.png" class="h-8 md:h-10 w-auto object-contain" alt="PostgreSQL">
+                    <img src="./assets/Techstack/post.png" class="h-8 md:h-10 w-auto object-contain" alt="PostgreSQL">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/mongo.png" class="h-8 md:h-10 w-auto object-contain" alt="MongoDB">
+                    <img src="./assets/Techstack/mongo.png" class="h-8 md:h-10 w-auto object-contain" alt="MongoDB">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/docker.png" class="h-8 md:h-10 w-auto object-contain" alt="Docker">
+                    <img src="./assets/Techstack/docker.png" class="h-8 md:h-10 w-auto object-contain" alt="Docker">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/pandas.png" class="h-8 md:h-10 w-auto object-contain" alt="Pandas">
+                    <img src="./assets/Techstackpandas.png" class="h-8 md:h-10 w-auto object-contain" alt="Pandas">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/high.png" class="h-8 md:h-10 w-auto object-contain" alt="GoHighLevel">
+                    <img src="./assets/Techstack/high.png" class="h-8 md:h-10 w-auto object-contain" alt="GoHighLevel">
                 </div>
                 <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/webrtc.png" class="h-8 md:h-10 w-auto object-contain" alt="WebRTC">
+                    <img src="./assets/Techstack/webrtc.png" class="h-8 md:h-10 w-auto object-contain" alt="WebRTC">
                 </div>
+                <!----------------------------------------------------------------------------------------------------->
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/mcp.png" class="h-8 md:h-10 w-auto object-contain" alt="MCP">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/vapi.png" class="h-8 md:h-10 w-auto object-contain" alt="Vapi">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/n8n.png" class="h-8 md:h-10 w-auto object-contain" alt="n8n">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/openai.png" class="h-8 md:h-10 w-auto object-contain" alt="OpenAI">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/langchain.png" class="h-8 md:h-10 w-auto object-contain" alt="LangChain">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/flow.png" class="h-8 md:h-10 w-auto object-contain" alt="Flowise">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/Pytorch.png" class="h-8 md:h-10 w-auto object-contain" alt="PyTorch">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/react.png" class="h-8 md:h-10 w-auto object-contain" alt="React">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/node.png" class="h-8 md:h-10 w-auto object-contain" alt="Node.js">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/python.png" class="h-8 md:h-10 w-auto object-contain" alt="Python">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/aws.png" class="h-8 md:h-10 w-auto object-contain" alt="AWS">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/eleven.png" class="h-8 md:h-10 w-auto object-contain" alt="ElevenLabs">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/fast.png" class="h-8 md:h-10 w-auto object-contain" alt="FastAPI">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/post.png" class="h-8 md:h-10 w-auto object-contain" alt="PostgreSQL">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/mongo.png" class="h-8 md:h-10 w-auto object-contain" alt="MongoDB">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/docker.png" class="h-8 md:h-10 w-auto object-contain" alt="Docker">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstackpandas.png" class="h-8 md:h-10 w-auto object-contain" alt="Pandas">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/high.png" class="h-8 md:h-10 w-auto object-contain" alt="GoHighLevel">
+                </div>
+                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
+                    <img src="./assets/Techstack/webrtc.png" class="h-8 md:h-10 w-auto object-contain" alt="WebRTC">
+                </div>
+            </div>
 
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/mcp.png" class="h-8 md:h-10 w-auto object-contain" alt="MCP">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/vapi.png" class="h-8 md:h-10 w-auto object-contain" alt="Vapi">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/n8n.png" class="h-8 md:h-10 w-auto object-contain" alt="n8n">
-                </div>
-                <div class="flex items-center justify-center opacity-100 transition-all duration-300">
-                    <img src="./assets/openai.png" class="h-8 md:h-10 w-auto object-contain" alt="OpenAI">
-                </div>
-                </div>
-        </div>
         <div>
             <br><br><br><br><br>
         </div>
