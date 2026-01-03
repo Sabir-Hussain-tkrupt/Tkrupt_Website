@@ -145,5 +145,6 @@ class FloatingShapesBackground extends HTMLElement {
   }
 }
 
+
 customElements.define('floating-shapes-background', FloatingShapesBackground);
 
