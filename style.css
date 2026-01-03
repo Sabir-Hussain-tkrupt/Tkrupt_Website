@@ -2457,3 +2457,199 @@ particle-background {
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Problem/Solution Card Styles (Compact Dimensions) --- */
+.problem-card {
+    background: radial-gradient(circle at top left, rgba(4, 215, 194, 0.14), transparent 55%), rgba(5, 12, 24, 0.92);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 2rem; 
+    border-radius: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 20px 50px rgba(4, 215, 194, 0.3);
+}
+
+.problem-icon-wrapper {
+    margin-bottom: 1.5rem;
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.problem-card:hover .problem-icon-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* --- Intelligent Solutions (Pillars) --- */
+.solution-pillar-card {
+    background: radial-gradient(circle at top left, rgba(4, 215, 194, 0.14), transparent 55%), rgba(5, 12, 24, 0.92);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 2.5rem 2rem; 
+    border-radius: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+}
+
+.solution-pillar-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 20px 50px rgba(4, 215, 194, 0.3);
+}
+
+.pillar-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(5,227,207,0.05), rgba(0,185,255,0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #05e3cf;
+    border: 1px solid rgba(5,227,207,0.2);
+    box-shadow: 0 0 20px rgba(5, 227, 207, 0.1);
+}
+
+/* Badge Hover Effect - Triggers ONLY when hovering the BADGE itself */
+.pillar-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 99px;
+    background: rgba(5,227,207,0.05);
+    color: #05e3cf;
+    border: 1px solid rgba(5,227,207,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pillar-badge:hover {
+    background: linear-gradient(120deg, #04d7c2, #00b9ff);
+    color: #021019;
+    border-color: transparent;
+    box-shadow: 0 0 15px rgba(4, 215, 194, 0.5);
+    transform: translateY(-2px);
+    text-shadow: none;
+}
+
+/* --- Feature Grid --- */
+.feature-box {
+    background: radial-gradient(circle at top left, rgba(4, 215, 194, 0.14), transparent 55%), rgba(5, 12, 24, 0.92);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+}
+
+.feature-box:hover {
+    transform: translateY(-3px);
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 20px 50px rgba(4, 215, 194, 0.3);
+}
+
+.feature-icon {
+    color: #05e3cf;
+    margin-bottom: 1rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(5, 227, 207, 0.1);
+    border-radius: 12px;
+}
+
+.feature-box h4 {
+    color: #f3f4f6;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.feature-box p {
+    color: #9ca3af;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* --- Timeline Steps (ENLARGED) --- */
+.step-icon-wrapper {
+    width: 80px; /* ENLARGED from 64px */
+    height: 80px; /* ENLARGED from 64px */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 20;
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover .step-icon-wrapper {
+    transform: scale(1.15);
+}
+
+.step-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* --- Architecture --- */
+.arch-box {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    backdrop-filter: blur(5px);
+}
