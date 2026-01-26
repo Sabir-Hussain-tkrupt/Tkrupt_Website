@@ -346,17 +346,28 @@ class CustomHeader extends HTMLElement {
                     <img src="./assets/3.png" alt="Tkrupt logo">
                 </a>
                 <div class="nav-links">
-                    <a href="services.html">Services</a>
                     <div class="dropdown">
-                        <a href="ai-solutions.html" class="dropdown-toggle">AI Solutions <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i></a>
+                        <a href="services.html" class="dropdown-toggle">Services<i data-feather="chevron-down" class="w-4 h-4 ml-1"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="ai-ml-development.html">Custom AI/ML Development</a>
+                            <a href="generative-ai.html">Generative AI & RAG Systems</a>
+                            <a href="voice-ai-agents.html">Voice & Chat Agents</a>
+                            <a href="Workflow Automation.html">Workflow Automation & Multi-Agent Systems</a>
+                            <a href="ai-consulting.html">AI Consulting & Enablement</a>
+                            <a href="mcp-a2a.html">Model Context Protocol (MCP) Systems</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="ai-solutions.html" class="dropdown-toggle">AI Solutions<i data-feather="chevron-down" class="w-4 h-4 ml-1"></i></a>
                         <div class="dropdown-menu">
                             <a href="ai-solutions.html#solutions">By Industry</a>
                             <a href="ai-solutions.html#solutions">By Team</a>
-                            <a href="ai-solutions.html#solutions">AI Products</a>
+                            <a href="ai-solutions.html#solutions">By Products</a>
                         </div>
                     </div>
-                    <a href="resources.html">Resources</a>
                     <a href="portfolio.html">Portfolio</a>
+                    <a href="for-agencies.html">For Agencies</a>
+                    <a href="resources.html">Resources</a>
                 </div>
                 <div class="cta-group">
                     <a href="https://calendly.com/tkrupt-llc/30min" class="book-btn">Get Started</a>

@@ -214,7 +214,7 @@ class CustomFooter extends HTMLElement {
                 <div class="footer-links">
                     <h3>Contact</h3>
                     <ul>
-                        <li><a href="#"><i data-feather="map-pin" class="w-4 h-4 mr-2 inline"></i> 11410 Lazarro LN, Richmond TX 77406, USA</a></li>
+                        <li><a href="#"><i data-feather="map-pin" class="w-4 h-4 mr-2 inline"></i>5900 BALCONES DR STE 100, AUSTIN, TX 78731 - 4298</a></li>
                         <li><a href="tel:+16282773693"><i data-feather="phone" class="w-4 h-4 mr-2 inline"></i> +1 (628) 277-3693</a></li>
                         <li><a href="mailto:hi@tkrupt.com"><i data-feather="mail" class="w-4 h-4 mr-2 inline"></i> hi@tkrupt.com</a></li>
                     </ul>

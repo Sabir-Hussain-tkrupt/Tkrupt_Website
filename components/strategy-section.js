@@ -558,7 +558,7 @@ class StrategySection extends HTMLElement {
           <div class="eyebrow">How We Build With You</div>
           <h2>From Discovery to Scaled AI</h2>
         <p class="subtitle">
-            We turn ideas into production AI systems through a guided, hands-on partnership — one step at a time.
+            We turn ideas into production AI systems through a guided, hands-on partnership one step at a time.
         </p>
         </header>
         
