@@ -2458,21 +2458,6 @@ particle-background {
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --- Problem/Solution Card Styles (Compact Dimensions) --- */
 .problem-card {
     background: radial-gradient(circle at top left, rgba(4, 215, 194, 0.14), transparent 55%), rgba(5, 12, 24, 0.92);
